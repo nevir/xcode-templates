@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>Identifier</key>
+    <string>net.nevir.xcode-templates.common.objective-c-code-style</string>
+    <key>Description</key>
+    <string>Common options, macros, and definitions for Objective-C.</string>
+    <key>Kind</key>
+    <string>Xcode.Xcode3.ProjectTemplateUnitKind</string>
+    <key>Ancestors</key>
+    <array>
+      <string>net.nevir.xcode-templates.common.code-style</string>
+    </array>
+
+    <key>Options</key>
+    <array>
+
+      <dict>
+        <key>Identifier</key>
+        <string>classPrefix</string>
+        <key>Name</key>
+        <string>Class Prefix</string>
+        <key>Description</key>
+        <string>The prefix to prepend to all created Objective-C classes</string>
+        <key>SortOrder</key>
+        <integer>110</integer>
+        <key>Type</key>
+        <string>text</string>
+        <key>Placeholder</key>
+        <string>XYZ</string>
+      </dict>
+
+      <dict>
+        <key>Identifier</key>
+        <string>objCMethodStyle</string>
+        <key>Name</key>
+        <string>Method Style</string>
+        <key>Description</key>
+        <string>It's all about the spacing</string>
+        <key>SortOrder</key>
+        <integer>120</integer>
+        <key>Type</key>
+        <string>popup</string>
+        <key>Default</key>
+        <string>- (void)method:(NSString *)variable and:(BOOL)anotherVariable</string>
+        <key>Units</key>
+        <dict>
+          <key>- (void)method:(NSString *)variable and:(BOOL)anotherVariable</key>
+          <dict>
+            <key>Macros</key>
+            <dict>
+              <key>VP</key>
+              <string> *</string>
+              <key>RS</key>
+              <string></string>
+              <key>VS</key>
+              <string></string>
+            </dict>
+          </dict>
+          <key>- (void) method:(NSString*)variable and:(BOOL)anotherVariable</key>
+          <dict>
+            <key>Macros</key>
+            <dict>
+              <key>VP</key>
+              <string>*</string>
+              <key>RS</key>
+              <string> </string>
+              <key>VS</key>
+              <string></string>
+            </dict>
+          </dict>
+          <key>- (void) method:(NSString*) variable and:(BOOL) anotherVariable</key>
+          <dict>
+            <key>Macros</key>
+            <dict>
+              <key>VP</key>
+              <string>*</string>
+              <key>RS</key>
+              <string> </string>
+              <key>VS</key>
+              <string> </string>
+            </dict>
+          </dict>
+        </dict>
+      </dict>
+
+    </array>
+
+    <key>Nodes</key>
+    <array>
+      <!-- It's a brave new world -->
+      <string>Configuration/Project.xcconfig:config:Compiler - Language:CLANG_ENABLE_OBJC_ARC = YES</string>
+    </array>
+
+    <key>Definitions</key>
+    <dict>
+      <!-- Generic Source Helpers -->
+      <key>*:importFramework:*</key>
+      <string>#import &lt;___*___/___*___.h&gt;</string>
+
+      <key>*:import</key>
+        <dict>
+        <key>End</key>
+        <string>
+</string>
+      </dict>
+      <key>*:import:*</key>
+      <string>#import &quot;___*___&quot;</string>
+
+      <!-- Class Interface Helpers -->
+      <key>*:interface</key>
+      <dict>
+        <key>End</key>
+        <string>
+@end</string>
+      </dict>
+
+      <key>*:interface:definition:*</key>
+      <string>
+@interface ___FILEBASENAME___ : ___*___</string>
+
+      <key>*:interface:ivars</key>
+      <dict>
+        <key>End</key>
+        <string>}</string>
+      </dict>
+      <key>*:interface:ivars:definition:*</key>
+      <string>
+@interface ___FILEBASENAME___ : ___*______OB0___</string>
+
+      <key>*:interface:methods:singleton</key>
+      <string>
++ (___FILEBASENAME______VP___)___RS___sharedInstance;</string>
+
+      <!-- Class Implementation Helpers -->
+      <key>*:private</key>
+      <dict>
+        <key>Beginning</key>
+        <string>
+@interface ___FILEBASENAME___ ()</string>
+        <key>End</key>
+        <string>
+@end</string>
+      </dict>
+
+      <key>*:implementation</key>
+      <dict>
+        <key>Beginning</key>
+        <string>
+@implementation ___FILEBASENAME___</string>
+        <key>End</key>
+        <string>
+@end</string>
+      </dict>
+
+      <key>*:implementation:synthesize</key>
+      <dict>
+        <key>Beginning</key>
+        <string>
+</string>
+      </dict>
+      <key>*:implementation:synthesize:*</key>
+      <string>@synthesize ___*___ = ____*___;</string>
+
+      <key>*:implementation:singleton</key>
+      <string>
++ (___FILEBASENAME______VP___)___RS___sharedInstance___OB0___
+___I1___static ___FILEBASENAME______P___sharedInstance = nil;
+___I1___static dispatch_once_t onceToken;
+___I1___
+___I1___dispatch_once(&amp;onceToken, ^{
+___I1______I1___sharedInstance = [[___FILEBASENAME___ alloc] init];
+___I1___});
+___I1___
+___I1___return sharedInstance;
+}</string>
+    </dict>
+
+  </dict>
+</plist>

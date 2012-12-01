@@ -1,0 +1,428 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>Identifier</key>
+    <string>net.nevir.xcode-templates.ios.common.cocoa-application</string>
+    <key>Description</key>
+    <string>A basis for Cocoa Touch applications.</string>
+    <key>Kind</key>
+    <string>Xcode.Xcode3.ProjectTemplateUnitKind</string>
+    <key>Ancestors</key>
+    <array>
+      <string>net.nevir.xcode-templates.common.objective-c-application</string>
+      <string>net.nevir.xcode-templates.ios.common.base</string>
+      <string>net.nevir.xcode-templates.ios.common.objective-c-code-style</string>
+    </array>
+
+    <key>Options</key>
+    <array>
+      <dict>
+        <key>Identifier</key>
+        <string>universalDeviceFamily</string>
+        <key>Name</key>
+        <string>Devices</string>
+        <key>Description</key>
+        <string>Which device family to create a project for</string>
+        <key>SortOrder</key>
+        <integer>1</integer>
+        <key>Type</key>
+        <string>popup</string>
+        <key>Default</key>
+        <string>Universal</string>
+        <key>Units</key>
+        <dict>
+          <key>Universal</key>
+          <dict>
+            <key>Nodes</key>
+            <array>
+              <string>Configuration/Project.xcconfig:config:Packaging:TARGETED_DEVICE_FAMILY = 1,2</string>
+              <string>Info.plist:UISupportedInterfaceOrientations~iPhone</string>
+              <string>Info.plist:UISupportedInterfaceOrientations~iPad</string>
+              <string>Info.plist:Icons:Icon-29.png</string>
+              <string>Info.plist:Icons:Icon-29@2x.png</string>
+              <string>Info.plist:Icons:Icon-50.png</string>
+              <string>Info.plist:Icons:Icon-50@2x.png</string>
+              <string>Info.plist:Icons:Icon-57.png</string>
+              <string>Info.plist:Icons:Icon-57@2x.png</string>
+              <string>Info.plist:Icons:Icon-72.png</string>
+              <string>Info.plist:Icons:Icon-72@2x.png</string>
+              <string>Assets/Splash~iphone.png</string>
+              <string>Assets/Splash@2x~iphone.png</string>
+              <string>Assets/Splash-568h@2x~iphone.png</string>
+              <string>Assets/Splash-Landscape~ipad.png</string>
+              <string>Assets/Splash-Landscape@2x~ipad.png</string>
+              <string>Assets/Splash-Portrait~ipad.png</string>
+              <string>Assets/Splash-Portrait@2x~ipad.png</string>
+              <string>Assets/Icon-29.png</string>
+              <string>Assets/Icon-29@2x.png</string>
+              <string>Assets/Icon-50.png</string>
+              <string>Assets/Icon-50@2x.png</string>
+              <string>Assets/Icon-57.png</string>
+              <string>Assets/Icon-57@2x.png</string>
+              <string>Assets/Icon-72.png</string>
+              <string>Assets/Icon-72@2x.png</string>
+            </array>
+          </dict>
+          <key>iPhone</key>
+          <dict>
+            <key>Nodes</key>
+            <array>
+              <string>Configuration/Project.xcconfig:config:Packaging:TARGETED_DEVICE_FAMILY = 1</string>
+              <string>Info.plist:UISupportedInterfaceOrientations~iPhone</string>
+              <string>Info.plist:Icons:Icon-29.png</string>
+              <string>Info.plist:Icons:Icon-29@2x.png</string>
+              <string>Info.plist:Icons:Icon-57.png</string>
+              <string>Info.plist:Icons:Icon-57@2x.png</string>
+              <string>Assets/Splash~iphone.png</string>
+              <string>Assets/Splash@2x~iphone.png</string>
+              <string>Assets/Splash-568h@2x~iphone.png</string>
+              <string>Assets/Icon-29.png</string>
+              <string>Assets/Icon-29@2x.png</string>
+              <string>Assets/Icon-57.png</string>
+              <string>Assets/Icon-57@2x.png</string>
+            </array>
+          </dict>
+          <key>iPad</key>
+          <dict>
+            <key>Nodes</key>
+            <array>
+              <string>Configuration/Project.xcconfig:config:Packaging:TARGETED_DEVICE_FAMILY = 2</string>
+              <string>Info.plist:UISupportedInterfaceOrientations~iPad</string>
+              <string>Info.plist:Icons:Icon-29.png</string>
+              <string>Info.plist:Icons:Icon-29@2x.png</string>
+              <string>Info.plist:Icons:Icon-50.png</string>
+              <string>Info.plist:Icons:Icon-50@2x.png</string>
+              <string>Info.plist:Icons:Icon-72.png</string>
+              <string>Info.plist:Icons:Icon-72@2x.png</string>
+              <string>Assets/Splash-Landscape~ipad.png</string>
+              <string>Assets/Splash-Landscape@2x~ipad.png</string>
+              <string>Assets/Splash-Portrait~ipad.png</string>
+              <string>Assets/Splash-Portrait@2x~ipad.png</string>
+              <string>Assets/Icon-29.png</string>
+              <string>Assets/Icon-29@2x.png</string>
+              <string>Assets/Icon-50.png</string>
+              <string>Assets/Icon-50@2x.png</string>
+              <string>Assets/Icon-72.png</string>
+              <string>Assets/Icon-72@2x.png</string>
+            </array>
+          </dict>
+        </dict>
+      </dict>
+    </array>
+
+    <key>Targets</key>
+    <array>
+      <dict>
+        <key>Frameworks</key>
+        <array>
+          <string>UIKit</string>
+          <string>Foundation</string>
+          <string>CoreGraphics</string>
+        </array>
+      </dict>
+    </array>
+
+    <key>Nodes</key>
+    <array>
+      <string>Configuration/Project.xcconfig:config:Code Signing:CODE_SIGN_IDENTITY = iPhone Developer</string>
+      <string>Configuration/Project-Release.xcconfig:config:Compiler - Language:OTHER_CFLAGS = -DNS_BLOCK_ASSERTIONS=1</string>
+
+      <string>Info.plist:iOS</string>
+      <string>Info.plist:NSMainNibFile</string>
+
+      <string>common.pch:Availability:iPhoneAvailability:6</string>
+
+      <string>Application/main.m:import:___VARIABLE_classPrefix:identifier___AppDelegate.h</string>
+      <string>Application/main.m:main:UIApplicationMain:contents</string>
+
+      <string>Application/___VARIABLE_classPrefix:identifier___AppDelegate.h:headerCommentsSlash:Application delegate for ___PACKAGENAME___</string>
+      <string>Application/___VARIABLE_classPrefix:identifier___AppDelegate.h:interface:definition:UIResponder &lt;UIApplicationDelegate&gt;</string>
+      <string>Application/___VARIABLE_classPrefix:identifier___AppDelegate.h:interface:properties:window</string>
+
+      <string>Application/___VARIABLE_classPrefix:identifier___AppDelegate.m:headerCommentsSlash:The application delegate is where you should manage lifecycle events and
+// other global application concerns.</string>
+      <string>Application/___VARIABLE_classPrefix:identifier___AppDelegate.m:import:___VARIABLE_classPrefix:identifier___AppDelegate.h</string>
+      <string>Application/___VARIABLE_classPrefix:identifier___AppDelegate.m:implementation:section:Application Lifecycle</string>
+      <string>Application/___VARIABLE_classPrefix:identifier___AppDelegate.m:implementation:section:Application Lifecycle:applicationdidFinishLaunchingWithOptions:setup</string>
+      <string>Application/___VARIABLE_classPrefix:identifier___AppDelegate.m:implementation:section:Application Lifecycle:applicationdidFinishLaunchingWithOptions:comments</string>
+      <string>Application/___VARIABLE_classPrefix:identifier___AppDelegate.m:implementation:section:Application Lifecycle:applicationdidFinishLaunchingWithOptions:body</string>
+      <string>Application/___VARIABLE_classPrefix:identifier___AppDelegate.m:implementation:section:Application Lifecycle:applicationdidFinishLaunchingWithOptions:return</string>
+      <string>Application/___VARIABLE_classPrefix:identifier___AppDelegate.m:implementation:section:Application Lifecycle:applicationWillResignActive:comments</string>
+      <string>Application/___VARIABLE_classPrefix:identifier___AppDelegate.m:implementation:section:Application Lifecycle:applicationDidEnterBackground:comments</string>
+      <string>Application/___VARIABLE_classPrefix:identifier___AppDelegate.m:implementation:section:Application Lifecycle:applicationWillEnterForeground:comments</string>
+      <string>Application/___VARIABLE_classPrefix:identifier___AppDelegate.m:implementation:section:Application Lifecycle:applicationDidBecomeActive:comments</string>
+      <string>Application/___VARIABLE_classPrefix:identifier___AppDelegate.m:implementation:section:Application Lifecycle:applicationWillTerminate:comments</string>
+    </array>
+
+    <key>Definitions</key>
+    <dict>
+      <!-- Static Files -->
+      <key>Assets/Splash~iphone.png</key>
+      <dict>
+        <key>Group</key>
+        <string>Assets</string>
+        <key>Path</key>
+        <string>Splash~iphone.png</string>
+      </dict>
+      <key>Assets/Splash@2x~iphone.png</key>
+      <dict>
+        <key>Group</key>
+        <string>Assets</string>
+        <key>Path</key>
+        <string>Splash@2x~iphone.png</string>
+      </dict>
+      <key>Assets/Splash-568h@2x~iphone.png</key>
+      <dict>
+        <key>Group</key>
+        <string>Assets</string>
+        <key>Path</key>
+        <string>Splash-568h@2x~iphone.png</string>
+      </dict>
+      <key>Assets/Splash-Landscape~ipad.png</key>
+      <dict>
+        <key>Group</key>
+        <string>Assets</string>
+        <key>Path</key>
+        <string>Splash-Landscape~ipad.png</string>
+      </dict>
+      <key>Assets/Splash-Landscape@2x~ipad.png</key>
+      <dict>
+        <key>Group</key>
+        <string>Assets</string>
+        <key>Path</key>
+        <string>Splash-Landscape@2x~ipad.png</string>
+      </dict>
+      <key>Assets/Splash-Portrait~ipad.png</key>
+      <dict>
+        <key>Group</key>
+        <string>Assets</string>
+        <key>Path</key>
+        <string>Splash-Portrait~ipad.png</string>
+      </dict>
+      <key>Assets/Splash-Portrait@2x~ipad.png</key>
+      <dict>
+        <key>Group</key>
+        <string>Assets</string>
+        <key>Path</key>
+        <string>Splash-Portrait@2x~ipad.png</string>
+      </dict>
+      <key>Assets/Icon-29.png</key>
+      <dict>
+        <key>Group</key>
+        <string>Assets</string>
+        <key>Path</key>
+        <string>Icon-29.png</string>
+      </dict>
+      <key>Assets/Icon-29@2x.png</key>
+      <dict>
+        <key>Group</key>
+        <string>Assets</string>
+        <key>Path</key>
+        <string>Icon-29@2x.png</string>
+      </dict>
+      <key>Assets/Icon-50.png</key>
+      <dict>
+        <key>Group</key>
+        <string>Assets</string>
+        <key>Path</key>
+        <string>Icon-50.png</string>
+      </dict>
+      <key>Assets/Icon-50@2x.png</key>
+      <dict>
+        <key>Group</key>
+        <string>Assets</string>
+        <key>Path</key>
+        <string>Icon-50@2x.png</string>
+      </dict>
+      <key>Assets/Icon-57.png</key>
+      <dict>
+        <key>Group</key>
+        <string>Assets</string>
+        <key>Path</key>
+        <string>Icon-57.png</string>
+      </dict>
+      <key>Assets/Icon-57@2x.png</key>
+      <dict>
+        <key>Group</key>
+        <string>Assets</string>
+        <key>Path</key>
+        <string>Icon-57@2x.png</string>
+      </dict>
+      <key>Assets/Icon-72.png</key>
+      <dict>
+        <key>Group</key>
+        <string>Assets</string>
+        <key>Path</key>
+        <string>Icon-72.png</string>
+      </dict>
+      <key>Assets/Icon-72@2x.png</key>
+      <dict>
+        <key>Group</key>
+        <string>Assets</string>
+        <key>Path</key>
+        <string>Icon-72@2x.png</string>
+      </dict>
+
+      <!-- common.pch -->
+      <key>common.pch:Availability:iPhoneAvailability:*</key>
+      <string>#import &lt;Availability.h&gt;
+
+#ifndef __IPHONE____*____0
+#warning "This project uses features only available in iOS SDK ___*___.0 and later."
+#endif
+</string>
+
+      <!-- Info.plist -->
+      <key>Info.plist:iOS</key>
+      <string>&lt;key&gt;CFBundleDisplayName&lt;/key&gt;
+&lt;string&gt;${PRODUCT_NAME}&lt;/string&gt;
+&lt;key&gt;CFBundleVersion&lt;/key&gt;
+&lt;string&gt;1.0&lt;/string&gt;
+&lt;key&gt;CFBundleShortVersionString&lt;/key&gt;
+&lt;string&gt;1.0&lt;/string&gt;
+&lt;key&gt;LSRequiresIPhoneOS&lt;/key&gt;
+&lt;true/&gt;
+&lt;key&gt;UIRequiredDeviceCapabilities&lt;/key&gt;
+&lt;array&gt;
+  &lt;string&gt;armv7&lt;/string&gt;
+&lt;/array&gt;
+&lt;key&gt;UILaunchImageFile&lt;/key&gt;
+&lt;string&gt;Splash&lt;/string&gt;</string>
+
+      <key>Info.plist:UISupportedInterfaceOrientations~iPhone</key>
+      <string>&lt;key&gt;UISupportedInterfaceOrientations&lt;/key&gt;
+&lt;array&gt;
+  &lt;string&gt;UIInterfaceOrientationPortrait&lt;/string&gt;
+  &lt;string&gt;UIInterfaceOrientationLandscapeLeft&lt;/string&gt;
+  &lt;string&gt;UIInterfaceOrientationLandscapeRight&lt;/string&gt;
+&lt;/array&gt;</string>
+
+      <key>Info.plist:UISupportedInterfaceOrientations~iPad</key>
+      <string>&lt;key&gt;UISupportedInterfaceOrientations~ipad&lt;/key&gt;
+&lt;array&gt;
+  &lt;string&gt;UIInterfaceOrientationPortrait&lt;/string&gt;
+  &lt;string&gt;UIInterfaceOrientationPortraitUpsideDown&lt;/string&gt;
+  &lt;string&gt;UIInterfaceOrientationLandscapeLeft&lt;/string&gt;
+  &lt;string&gt;UIInterfaceOrientationLandscapeRight&lt;/string&gt;
+&lt;/array&gt;</string>
+
+
+      <!-- Application/main.m -->
+      <key>Application/main.m:main:UIApplicationMain</key>
+      <string>___I1___@autoreleasepool___OB1___
+___I2___return UIApplicationMain(argc, argv, nil, NSStringFromClass([___VARIABLE_classPrefix:identifier___AppDelegate class]));
+___I1___}</string>
+
+
+      <!-- Application/AppDelegate.h -->
+      <key>Application/___VARIABLE_classPrefix:identifier___AppDelegate.h</key>
+      <dict>
+        <key>Group</key>
+        <string>Application</string>
+      </dict>
+      <key>Application/___VARIABLE_classPrefix:identifier___AppDelegate.h:interface:properties:window</key>
+      <string>
+@property (strong, nonatomic) UIWindow___P___window;</string>
+
+      <!-- Application/AppDelegate.m -->
+      <key>Application/___VARIABLE_classPrefix:identifier___AppDelegate.m</key>
+      <dict>
+        <key>Group</key>
+        <string>Application</string>
+      </dict>
+
+      <!-- Application/AppDelegate.m - Application Lifecycle -->
+      <key>Application/___VARIABLE_classPrefix:identifier___AppDelegate.m:implementation:section:Application Lifecycle:applicationdidFinishLaunchingWithOptions</key>
+      <dict>
+        <key>Beginning</key>
+        <string>
+- (BOOL)___RS___application:(UIApplication___VP___)___VS___application didFinishLaunchingWithOptions:(NSDictionary___VP___)___VS___launchOptions___OB0___</string>
+        <key>End</key>
+        <string>}</string>
+      </dict>
+
+      <key>Application/___VARIABLE_classPrefix:identifier___AppDelegate.m:implementation:section:Application Lifecycle:applicationdidFinishLaunchingWithOptions:setup</key>
+      <string>___I1___self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+</string>
+      <key>Application/___VARIABLE_classPrefix:identifier___AppDelegate.m:implementation:section:Application Lifecycle:applicationdidFinishLaunchingWithOptions:comments</key>
+      <string>___I1___// Override point for customization after application launch</string>
+      <key>Application/___VARIABLE_classPrefix:identifier___AppDelegate.m:implementation:section:Application Lifecycle:applicationdidFinishLaunchingWithOptions:return</key>
+      <string>
+___I1___[self.window makeKeyAndVisible];
+___I1___return YES;</string>
+
+      <key>Application/___VARIABLE_classPrefix:identifier___AppDelegate.m:implementation:section:Application Lifecycle:applicationWillResignActive</key>
+      <dict>
+        <key>Beginning</key>
+        <string>
+- (void)___RS___applicationWillResignActive:(UIApplication___VP___)___VS___application___OB0___</string>
+        <key>End</key>
+        <string>}</string>
+      </dict>
+      <key>Application/___VARIABLE_classPrefix:identifier___AppDelegate.m:implementation:section:Application Lifecycle:applicationWillResignActive:comments</key>
+      <string>___I1___// Sent when the application is about to move from active to inactive state.
+___I1___// This can occur for certain types of temporary interruptions (such as an
+___I1___// incoming phone call or SMS message) or when the user quits the
+___I1___// application and it begins the transition to the background state.
+___I1___//
+___I1___// Use this method to pause ongoing tasks, disable timers, and throttle down
+___I1___// OpenGL ES frame rates. Games should use this method to pause the game.</string>
+
+      <key>Application/___VARIABLE_classPrefix:identifier___AppDelegate.m:implementation:section:Application Lifecycle:applicationDidEnterBackground</key>
+      <dict>
+        <key>Beginning</key>
+        <string>
+- (void)___RS___applicationDidEnterBackground:(UIApplication___VP___)___VS___application___OB0___</string>
+        <key>End</key>
+        <string>}</string>
+      </dict>
+      <key>Application/___VARIABLE_classPrefix:identifier___AppDelegate.m:implementation:section:Application Lifecycle:applicationDidEnterBackground:comments</key>
+      <string>___I1___// Use this method to release shared resources, save user data, invalidate
+___I1___// timers, and store enough application state information to restore your
+___I1___// application to its current state in case it is terminated later.
+___I1___//
+___I1___// If your application supports background execution, this method is called
+___I1___// instead of applicationWillTerminate: when the user quits.</string>
+
+      <key>Application/___VARIABLE_classPrefix:identifier___AppDelegate.m:implementation:section:Application Lifecycle:applicationWillEnterForeground</key>
+      <dict>
+        <key>Beginning</key>
+        <string>
+- (void)___RS___applicationWillEnterForeground:(UIApplication___VP___)___VS___application___OB0___</string>
+        <key>End</key>
+        <string>}</string>
+      </dict>
+      <key>Application/___VARIABLE_classPrefix:identifier___AppDelegate.m:implementation:section:Application Lifecycle:applicationWillEnterForeground:comments</key>
+      <string>___I1___// Called as part of the transition from the background to the inactive
+___I1___// state; here you can undo many of the changes made on entering the
+___I1___// background.</string>
+
+      <key>Application/___VARIABLE_classPrefix:identifier___AppDelegate.m:implementation:section:Application Lifecycle:applicationDidBecomeActive</key>
+      <dict>
+        <key>Beginning</key>
+        <string>
+- (void)___RS___applicationDidBecomeActive:(UIApplication___VP___)___VS___application___OB0___</string>
+        <key>End</key>
+        <string>}</string>
+      </dict>
+      <key>Application/___VARIABLE_classPrefix:identifier___AppDelegate.m:implementation:section:Application Lifecycle:applicationDidBecomeActive:comments</key>
+      <string>___I1___// Restart any tasks that were paused (or not yet started) while the
+___I1___// application was inactive. If the application was previously in the
+___I1___// background, optionally refresh the user interface.</string>
+
+      <key>Application/___VARIABLE_classPrefix:identifier___AppDelegate.m:implementation:section:Application Lifecycle:applicationWillTerminate</key>
+      <dict>
+        <key>Beginning</key>
+        <string>
+- (void)___RS___applicationWillTerminate:(UIApplication___VP___)___VS___application___OB0___</string>
+        <key>End</key>
+        <string>}</string>
+      </dict>
+      <key>Application/___VARIABLE_classPrefix:identifier___AppDelegate.m:implementation:section:Application Lifecycle:applicationWillTerminate:comments</key>
+      <string>___I1___// Called when the application is about to terminate. Save data if
+___I1___// appropriate. See also applicationDidEnterBackground:.</string>
+
+    </dict>
+  </dict>
+</plist>

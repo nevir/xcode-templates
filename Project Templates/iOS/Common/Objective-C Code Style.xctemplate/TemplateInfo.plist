@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>Identifier</key>
+    <string>net.nevir.xcode-templates.ios.common.objective-c-code-style</string>
+    <key>Description</key>
+    <string>Common definitions for Objective-C on iOS.</string>
+    <key>Kind</key>
+    <string>Xcode.Xcode3.ProjectTemplateUnitKind</string>
+    <key>Ancestors</key>
+    <array>
+      <string>net.nevir.xcode-templates.common.objective-c-code-style</string>
+    </array>
+
+    <key>Definitions</key>
+    <dict>
+      <key>*:importFramework:Cocoa</key>
+      <string>#import &lt;UIKit/UIKit.h&gt;</string>
+
+      <!-- ViewController Helpers -->
+      <key>*:implementation:initializers:initViewController</key>
+      <dict>
+        <key>Beginning</key>
+        <string>
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+___I1___self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+___I1___if (self)___OB1___</string>
+        <key>End</key>
+        <string>___I1___}
+___I1___return self;
+}</string>
+      </dict>
+
+      <key>*:implementation:section:*:viewDidLoad</key>
+      <dict>
+        <key>Beginning</key>
+        <string>
+- (void)___RS___viewDidLoad___OB0___
+___I1___[super viewDidLoad];
+
+___I1___// Do any additional setup after loading the view, typically from a nib.</string>
+        <key>End</key>
+        <string>}</string>
+      </dict>
+
+      <key>*:implementation:section:*:didReceiveMemoryWarning</key>
+      <dict>
+        <key>Beginning</key>
+        <string>
+- (void)___RS___didReceiveMemoryWarning___OB0___
+___I1___[super didReceiveMemoryWarning];
+
+___I1___// Dispose of any resources that can be recreated.</string>
+        <key>End</key>
+        <string>}</string>
+      </dict>
+    </dict>
+
+  </dict>
+</plist>

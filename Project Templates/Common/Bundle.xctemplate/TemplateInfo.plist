@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>Identifier</key>
+    <string>net.nevir.xcode-templates.common.bundle</string>
+    <key>Description</key>
+    <string>A bundle-based target.</string>
+    <key>Kind</key>
+    <string>Xcode.Xcode3.ProjectTemplateUnitKind</string>
+    <key>Ancestors</key>
+    <array>
+      <string>net.nevir.xcode-templates.common.base</string>
+    </array>
+
+    <key>Nodes</key>
+    <array>
+      <string>Info.plist:CFBundleIdentifier</string>
+    </array>
+
+    <key>Definitions</key>
+    <dict>
+      <!-- Specific Files -->
+
+      <!--
+        Note that we do not bother honoring indentation for plists since Xcode
+        bashes over it.
+      -->
+      <key>Info.plist</key>
+      <dict>
+        <key>Beginning</key>
+        <string>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE plist PUBLIC &quot;-//Apple//DTD PLIST 1.0//EN&quot; &quot;http://www.apple.com/DTDs/PropertyList-1.0.dtd&quot;&gt;
+&lt;plist version=&quot;1.0&quot;&gt;
+&lt;dict&gt;
+        </string>
+        <key>End</key>
+        <string>&lt;/dict&gt;
+&lt;/plist&gt;</string>
+        <key>TargetIndices</key>
+        <array/>
+        <key>SubstituteMacros</key>
+        <true/>
+      </dict>
+
+      <!-- Global Info.plist Keys -->
+      <key>Info.plist:CFBundleIdentifier</key>
+      <string>&lt;key&gt;CFBundleIdentifier&lt;/key&gt;
+  &lt;string&gt;___VARIABLE_bundleIdentifierPrefix:bundleIdentifier___.${PRODUCT_NAME:rfc1034identifier}&lt;/string&gt;</string>
+    </dict>
+  </dict>
+</plist>

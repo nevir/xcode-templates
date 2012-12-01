@@ -1,0 +1,10 @@
+#!/usr/bin/env ruby
+
+REPO_PATH   = File.expand_path(File.dirname(__FILE__))
+TARGET_PATH = File.expand_path("~/Library/Developer/Xcode/Templates/Better Xcode Templates")
+
+if File.exists? TARGET_PATH
+  puts "It looks like Better Xcode Templates is already installed at #{TARGET_PATH}"
+else
+  `ln -s "#{REPO_PATH}" "#{TARGET_PATH}"`
+end

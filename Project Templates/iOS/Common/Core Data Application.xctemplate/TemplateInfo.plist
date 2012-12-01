@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>Identifier</key>
+    <string>net.nevir.xcode-templates.ios.common.core-data-application</string>
+    <key>Description</key>
+    <string>A core data model and base management.</string>
+    <key>Kind</key>
+    <string>Xcode.Xcode3.ProjectTemplateUnitKind</string>
+    <key>Ancestors</key>
+    <array>
+      <string>net.nevir.xcode-templates.ios.common.cocoa-application</string>
+    </array>
+
+    <key>Options</key>
+    <array>
+      <dict>
+        <key>Identifier</key>
+        <string>coreData</string>
+        <key>Name</key>
+        <string>Use Core Data</string>
+        <key>Description</key>
+        <string>Whether the application should use the Core Data framework for storage</string>
+        <key>SortOrder</key>
+        <integer>1</integer>
+        <key>Type</key>
+        <string>checkbox</string>
+        <key>Default</key>
+        <string>false</string>
+        <key>Units</key>
+        <dict>
+          <key>true</key>
+          <dict>
+            <key>Targets</key>
+            <array>
+              <dict>
+                <key>Frameworks</key>
+                <array>
+                  <string>CoreData</string>
+                </array>
+              </dict>
+            </array>
+
+            <key>Nodes</key>
+            <array>
+              <string>common.pch:importFramework:CoreData</string>
+
+              <string>___PACKAGENAMEASIDENTIFIER___.xcdatamodeld</string>
+
+              <string>Managers/___VARIABLE_classPrefix:identifier___DataManager.h:headerCommentsSlash:Data manager singleton for ___PACKAGENAME___</string>
+              <string>Managers/___VARIABLE_classPrefix:identifier___DataManager.h:interface:definition:NSObject</string>
+              <string>Managers/___VARIABLE_classPrefix:identifier___DataManager.h:interface:properties:coreData</string>
+              <string>Managers/___VARIABLE_classPrefix:identifier___DataManager.h:interface:methods:singleton</string>
+              <string>Managers/___VARIABLE_classPrefix:identifier___DataManager.h:interface:methods:coreData</string>
+
+              <string>Managers/___VARIABLE_classPrefix:identifier___DataManager.m:headerCommentsSlash:This class is a convenient place to contain all your logic surrounding core
+// data (or other) persistence mechanisms.</string>
+              <string>Managers/___VARIABLE_classPrefix:identifier___DataManager.m:import:___VARIABLE_classPrefix:identifier___DataManager.h</string>
+              <string>Managers/___VARIABLE_classPrefix:identifier___DataManager.m:implementation:synthesize:managedObjectContext</string>
+              <string>Managers/___VARIABLE_classPrefix:identifier___DataManager.m:implementation:synthesize:managedObjectModel</string>
+              <string>Managers/___VARIABLE_classPrefix:identifier___DataManager.m:implementation:synthesize:persistentStoreCoordinator</string>
+              <string>Managers/___VARIABLE_classPrefix:identifier___DataManager.m:implementation:singleton</string>
+              <string>Managers/___VARIABLE_classPrefix:identifier___DataManager.m:implementation:section:Core Data Stack:properties</string>
+              <string>Managers/___VARIABLE_classPrefix:identifier___DataManager.m:implementation:section:Core Data Interactions:methods</string>
+
+              <string>Application/___VARIABLE_classPrefix:identifier___AppDelegate.m:import:___VARIABLE_classPrefix:identifier___DataManager.h</string>
+              <string>Application/___VARIABLE_classPrefix:identifier___AppDelegate.m:implementation:section:Application Lifecycle:applicationWillResignActive:dataManager</string>
+            </array>
+
+            <key>Definitions</key>
+            <dict>
+              <!-- Static Files -->
+              <key>___PACKAGENAMEASIDENTIFIER___.xcdatamodeld</key>
+              <dict>
+                <key>Path</key>
+                <string>___PACKAGENAMEASIDENTIFIER___.xcdatamodeld</string>
+              </dict>
+
+              <!-- Managers/DataManager.h -->
+              <key>Managers/___VARIABLE_classPrefix:identifier___DataManager.h</key>
+              <dict>
+                <key>Group</key>
+                <string>Managers</string>
+              </dict>
+              <key>Managers/___VARIABLE_classPrefix:identifier___DataManager.h:interface:properties:coreData</key>
+              <string>
+@property (readonly, strong, nonatomic) NSManagedObjectContext___P___managedObjectContext;
+@property (readonly, strong, nonatomic) NSManagedObjectModel___P___managedObjectModel;
+@property (readonly, strong, nonatomic) NSPersistentStoreCoordinator___P___persistentStoreCoordinator;</string>
+              <key>Managers/___VARIABLE_classPrefix:identifier___DataManager.h:interface:methods:coreData</key>
+              <string>
+- (void)___RS___saveContext;</string>
+
+              <!-- Managers/DataManager.m -->
+              <key>Managers/___VARIABLE_classPrefix:identifier___DataManager.m</key>
+              <dict>
+                <key>Group</key>
+                <string>Managers</string>
+              </dict>
+              <key>Managers/___VARIABLE_classPrefix:identifier___DataManager.m:implementation:section:Core Data Stack:properties</key>
+              <string>
+// Returns the managed object context for the application.
+//
+// If the context doesn't already exist, it is created and bound to the
+// persistent store coordinator for the application.
+- (NSManagedObjectContext___VP___)___RS___managedObjectContext___OB0___
+___I1___if (_managedObjectContext != nil)___OB1___
+___I1______I1___return _managedObjectContext;
+___I1___}
+
+___I1___NSPersistentStoreCoordinator___P___coordinator = self.persistentStoreCoordinator;
+___I1___if (coordinator != nil)___OB1___
+___I1______I1____managedObjectContext = [[NSManagedObjectContext alloc] init];
+___I1______I1____managedObjectContext.persistentStoreCoordinator = coordinator;
+___I1___}
+___I1___return _managedObjectContext;
+}
+
+// Returns the managed object model for the application.
+//
+// If the model doesn't already exist, it is created from the application's
+// model.
+- (NSManagedObjectModel___VP___)___RS___managedObjectModel___OB0___
+___I1___if (_managedObjectModel != nil)___OB1___
+___I1______I1___return _managedObjectModel;
+___I1___}
+
+___I1___NSURL___P___modelURL = [[NSBundle mainBundle] URLForResource:@"___PACKAGENAMEASIDENTIFIER___" withExtension:@"momd"];
+___I1____managedObjectModel = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];
+___I1___return _managedObjectModel;
+}
+
+// Returns the persistent store coordinator for the application.
+//
+// If the coordinator doesn't already exist, it is created and the application's
+//store added to it.
+- (NSPersistentStoreCoordinator___VP___)___RS___persistentStoreCoordinator___OB0___
+___I1___if (_persistentStoreCoordinator != nil)___OB1___
+___I1______I1___return _persistentStoreCoordinator;
+___I1___}
+
+___I1___NSURL___P___documentsURL = [[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask].lastObject;
+___I1___NSURL___P___storeURL = [documentsURL URLByAppendingPathComponent:@"___PACKAGENAMEASIDENTIFIER___.sqlite"];
+
+___I1___NSError___P___error = nil;
+___I1____persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:self.managedObjectModel];
+___I1___if (![_persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:nil error:&amp;error])___OB1___
+___I1______I1___// Replace this implementation with code to handle the error
+___I1______I1___// appropriately.
+___I1______I1___//
+___I1______I1___// abort() causes the application to generate a crash log and terminate.
+___I1______I1___// You should not use this function in a shipping application, although
+___I1______I1___// it may be useful during development.
+___I1______I1___//
+___I1______I1___// Typical reasons for an error here include:
+___I1______I1___//
+___I1______I1___// * The persistent store is not accessible
+___I1______I1___//
+___I1______I1___// * The schema for the persistent store is incompatible with current
+___I1______I1___//   managed object model.  Check the error message to determine what
+___I1______I1___//   the actual problem was.
+___I1______I1___//
+___I1______I1___// If the persistent store is not accessible, there is typically
+___I1______I1___// something wrong with the file path. Often, a file URL is pointing
+___I1______I1___// into the application's resources directory instead of a writeable
+___I1______I1___// directory.
+___I1______I1___//
+___I1______I1___// If you encounter schema incompatibility errors during development,
+___I1______I1___// you can reduce their frequency by:
+___I1______I1___//
+___I1______I1___// * Simply deleting the existing store:
+___I1______I1___//   [[NSFileManager defaultManager] removeItemAtURL:storeURL error:nil]
+___I1______I1___//
+___I1______I1___// * Performing automatic lightweight migration by passing the following
+___I1______I1___//   dictionary as the options parameter:
+___I1______I1___//   @{NSMigratePersistentStoresAutomaticallyOption:@YES, NSInferMappingModelAutomaticallyOption:@YES}
+___I1______I1___//
+___I1______I1___// Lightweight migration will only work for a limited set of schema
+___I1______I1___// changes; consult "Core Data Model Versioning and Data Migration
+___I1______I1___// Programming Guide" for details.
+___I1______I1___NSLog(@"Unresolved error %@, %@", error, error.userInfo);
+___I1______I1___abort();
+___I1___}
+
+___I1___return _persistentStoreCoordinator;
+}</string>
+              <key>Managers/___VARIABLE_classPrefix:identifier___DataManager.m:implementation:section:Core Data Interactions:methods</key>
+              <string>
+- (void)___RS___saveContext___OB0___
+___I1___NSError___P___error = nil;
+___I1___NSManagedObjectContext___P___managedObjectContext = self.managedObjectContext;
+
+___I1___if (managedObjectContext != nil)___OB1___
+___I1______I1___if (managedObjectContext.hasChanges &amp;&amp; ![managedObjectContext save:&amp;error])___OB2___
+___I1______I1______I1___// Replace this implementation with code to handle the error
+___I1______I1______I1___// appropriately.
+___I1______I1______I1___//
+___I1______I1______I1___// abort() causes the application to generate a crash log and
+___I1______I1______I1___// terminate. You should not use this function in a shipping
+___I1______I1______I1___// application, although it may be useful during development.
+___I1______I1______I1___NSLog(@"Unresolved error %@, %@", error, error.userInfo);
+___I1______I1______I1___abort();
+___I1______I1___}
+___I1___}
+}</string>
+
+              <!-- Application/AppDelegate.m -->
+              <key>Application/___VARIABLE_classPrefix:identifier___AppDelegate.m:implementation:section:Application Lifecycle:applicationWillResignActive:dataManager</key>
+              <string>
+___I1___// Saves changes in the application's managed object context before the
+___I1___// application loses focus.
+___I1___[[___VARIABLE_classPrefix:identifier___DataManager sharedInstance] saveContext];</string>
+            </dict>
+          </dict>
+        </dict>
+      </dict>
+    </array>
+
+  </dict>
+</plist>

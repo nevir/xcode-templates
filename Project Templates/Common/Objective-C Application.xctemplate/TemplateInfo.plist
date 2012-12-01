@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>Identifier</key>
+    <string>net.nevir.xcode-templates.common.objective-c-application</string>
+    <key>Description</key>
+    <string>A basis for Cocoa applications.</string>
+    <key>Kind</key>
+    <string>Xcode.Xcode3.ProjectTemplateUnitKind</string>
+    <key>Ancestors</key>
+    <array>
+      <string>net.nevir.xcode-templates.common.bundle</string>
+      <string>net.nevir.xcode-templates.common.objective-c-code-style</string>
+    </array>
+
+    <key>Targets</key>
+    <array>
+      <dict>
+        <key>ProductType</key>
+        <string>com.apple.product-type.application</string>
+        <key>BasedOn</key>
+        <dict>
+          <key>Debug</key>
+          <string>Configuration/Application.xcconfig</string>
+          <key>Release</key>
+          <string>Configuration/Application.xcconfig</string>
+        </dict>
+        <key>BuildPhases</key>
+        <array>
+          <dict>
+            <key>Class</key>
+            <string>Sources</string>
+          </dict>
+          <dict>
+            <key>Class</key>
+            <string>Frameworks</string>
+          </dict>
+          <dict>
+            <key>Class</key>
+            <string>Resources</string>
+          </dict>
+        </array>
+      </dict>
+    </array>
+
+    <key>Nodes</key>
+    <array>
+      <string>common.pch:importFramework:Cocoa</string>
+      <string>Configuration/Application.xcconfig:headerCommentsSlash:Configuration for the application target.</string>
+      <string>Configuration/Application.xcconfig:config:Packaging:INFOPLIST_FILE = $(TARGET_NAME)/Info.plist</string>
+      <string>Configuration/Application.xcconfig:config:Packaging:WRAPPER_EXTENSION = app</string>
+
+      <string>Info.plist:application</string>
+      <string>Application/main.m:headerCommentsSlash:Entry point for your application.</string>
+      <string>Application/main.m:import</string>
+      <string>Application/main.m:main</string>
+    </array>
+
+    <key>Definitions</key>
+    <dict>
+      <key>Configuration/Application.xcconfig</key>
+      <dict>
+        <key>Group</key>
+        <string>Configuration</string>
+      </dict>
+
+      <key>Application/main.m</key>
+      <dict>
+        <key>Group</key>
+        <string>Application</string>
+      </dict>
+
+      <key>Application/main.m:main</key>
+      <dict>
+        <key>Beginning</key>
+        <string>
+int main(int argc, char___P___argv[])___OB0___</string>
+        <key>End</key>
+        <string>}</string>
+      </dict>
+
+      <key>Info.plist:application</key>
+      <string>&lt;key&gt;CFBundleDevelopmentRegion&lt;/key&gt;
+&lt;string&gt;en&lt;/string&gt;
+&lt;key&gt;CFBundleExecutable&lt;/key&gt;
+&lt;string&gt;${EXECUTABLE_NAME}&lt;/string&gt;
+&lt;key&gt;CFBundleInfoDictionaryVersion&lt;/key&gt;
+&lt;string&gt;6.0&lt;/string&gt;
+&lt;key&gt;CFBundleName&lt;/key&gt;
+&lt;string&gt;${PRODUCT_NAME}&lt;/string&gt;
+&lt;key&gt;CFBundlePackageType&lt;/key&gt;
+&lt;string&gt;APPL&lt;/string&gt;
+&lt;key&gt;CFBundleSignature&lt;/key&gt;
+&lt;string&gt;????&lt;/string&gt;</string>
+    </dict>
+  </dict>
+</plist>

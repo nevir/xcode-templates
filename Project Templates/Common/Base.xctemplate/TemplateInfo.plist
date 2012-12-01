@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>Identifier</key>
+    <string>net.nevir.xcode-templates.common.base</string>
+    <key>Description</key>
+    <string>A foundational project template that provides common options, configuration, and macros</string>
+    <key>Kind</key>
+    <string>Xcode.Xcode3.ProjectTemplateUnitKind</string>
+
+    <key>Options</key>
+    <array>
+      <dict>
+        <key>Identifier</key>
+        <string>productName</string>
+        <key>Name</key>
+        <string>Product Name</string>
+        <key>Description</key>
+        <string>Your new product&apos;s name</string>
+        <key>Type</key>
+        <string>text</string>
+        <key>Required</key>
+        <true/>
+        <key>NotPersisted</key>
+        <true/>
+        <key>EmptyReplacement</key>
+        <string>ProductName</string>
+      </dict>
+      <dict>
+        <key>Identifier</key>
+        <string>organizationName</string>
+        <key>Name</key>
+        <string>Organization Name</string>
+        <key>Description</key>
+        <string>Your company&apos;s name</string>
+        <key>Type</key>
+        <string>text</string>
+        <key>Default</key>
+        <string>___FULLUSERNAME___</string>
+      </dict>
+      <dict>
+        <key>Identifier</key>
+        <string>bundleIdentifierPrefix</string>
+        <key>Name</key>
+        <string>Company Identifier</string>
+        <key>Description</key>
+        <string>Your company&apos;s bundle identifier prefix</string>
+        <key>Type</key>
+        <string>text</string>
+        <key>Required</key>
+        <true/>
+        <key>EmptyReplacement</key>
+        <string>com.yourcompany</string>
+      </dict>
+      <dict>
+        <key>Identifier</key>
+        <string>bundleIdentifier</string>
+        <key>Name</key>
+        <string>Bundle Identifier</string>
+        <key>Description</key>
+        <string>Your new product&apos;s bundle identifier</string>
+        <key>Type</key>
+        <string>static</string>
+        <key>NotPersisted</key>
+        <true/>
+        <key>Default</key>
+        <string>___VARIABLE_bundleIdentifierPrefix:bundleIdentifier___.___VARIABLE_productName:RFC1034Identifier___</string>
+      </dict>
+    </array>
+
+    <key>Project</key>
+    <dict>
+      <key>Configurations</key>
+      <dict>
+        <key>Debug</key>
+        <dict/>
+        <key>Release</key>
+        <dict/>
+      </dict>
+      <key>BasedOn</key>
+      <dict>
+        <key>Debug</key>
+        <string>Configuration/Project-Debug.xcconfig</string>
+        <key>Release</key>
+        <string>Configuration/Project-Release.xcconfig</string>
+      </dict>
+    </dict>
+
+    <key>Targets</key>
+    <array>
+      <dict>
+        <key>Name</key>
+        <string>___PACKAGENAME___</string>
+        <key>Configurations</key>
+        <dict>
+          <key>Debug</key>
+          <dict/>
+          <key>Release</key>
+          <dict/>
+        </dict>
+        <!--
+          It appears that BasedOn does not accept dynamic values.  This blocks
+          us from being able to share target-specific configuration among the
+          abstract templates.
+
+          Ideally, we want to be able to do the following:
+        -->
+        <!--
+        <key>BasedOn</key>
+        <dict>
+          <key>Debug</key>
+          <string>Configuration/___PACKAGENAME___-Debug.xcconfig</string>
+          <key>Release</key>
+          <string>Configuration/___PACKAGENAME___-Release.xcconfig</string>
+        </dict>
+        -->
+      </dict>
+    </array>
+
+    <key>Nodes</key>
+    <array>
+      <string>common.pch:headerCommentsSlash:Global imports for the target.</string>
+      <string>common.pch:Availability</string>
+
+      <string>Configuration/Project.xcconfig:headerCommentsSlash:Shared configuration for all targets in the project.</string>
+      <string>Configuration/Project.xcconfig:config:Packaging:PRODUCT_NAME = $(TARGET_NAME)</string>
+      <string>Configuration/Project.xcconfig:config:Search Paths:ALWAYS_SEARCH_USER_PATHS = NO</string>
+      <string>Configuration/Project.xcconfig:config:Compiler - Language:CLANG_CXX_LANGUAGE_STANDARD  = gnu++0x</string>
+      <string>Configuration/Project.xcconfig:config:Compiler - Language:CLANG_CXX_LIBRARY            = libc++</string>
+      <string>Configuration/Project.xcconfig:config:Compiler - Language:GCC_C_LANGUAGE_STANDARD      = gnu99</string>
+      <string>Configuration/Project.xcconfig:config:Compiler - Language:GCC_PRECOMPILE_PREFIX_HEADER = YES</string>
+      <string>Configuration/Project.xcconfig:config:Compiler - Language:GCC_PREFIX_HEADER            = $(TARGET_NAME)/common.pch</string>
+      <string>Configuration/Project.xcconfig:config:Compiler - Warnings - All Languages:CLANG_WARN_EMPTY_BODY        = YES</string>
+      <string>Configuration/Project.xcconfig:config:Compiler - Warnings - All Languages:GCC_WARN_ABOUT_RETURN_TYPE   = YES</string>
+      <string>Configuration/Project.xcconfig:config:Compiler - Warnings - All Languages:GCC_WARN_UNINITIALIZED_AUTOS = YES</string>
+      <string>Configuration/Project.xcconfig:config:Compiler - Warnings - All Languages:GCC_WARN_UNUSED_VARIABLE     = YES</string>
+      <string>Configuration/Project.xcconfig:config:Compiler - Warnings - Objective-C:CLANG_WARN__DUPLICATE_METHOD_MATCH = YES</string>
+
+      <string>Configuration/Project-Debug.xcconfig:headerCommentsSlash:Debug-specific configuration for all targets in the project.</string>
+      <string>Configuration/Project-Debug.xcconfig:configDependency:Project</string>
+      <string>Configuration/Project-Debug.xcconfig:config:Deployment:COPY_PHASE_STRIP = NO</string>
+      <string>Configuration/Project-Debug.xcconfig:config:Compiler - Code Generation:GCC_OPTIMIZATION_LEVEL     = 0</string>
+      <string>Configuration/Project-Debug.xcconfig:config:Compiler - Code Generation:GCC_SYMBOLS_PRIVATE_EXTERN = NO</string>
+      <string>Configuration/Project-Debug.xcconfig:config:Compiler - Preprocessing:GCC_PREPROCESSOR_DEFINITIONS = DEBUG=1</string>
+
+      <string>Configuration/Project-Release.xcconfig:headerCommentsSlash:Release-specific configuration for all targets in the project.</string>
+      <string>Configuration/Project-Release.xcconfig:configDependency:Project</string>
+    </array>
+
+    <key>Definitions</key>
+    <dict>
+      <!-- Specific Files -->
+      <key>Configuration/Project.xcconfig</key>
+      <dict>
+        <key>Group</key>
+        <string>Configuration</string>
+        <key>TargetIndices</key>
+        <array/>
+      </dict>
+
+      <key>Configuration/Project-Debug.xcconfig</key>
+      <dict>
+        <key>Group</key>
+        <string>Configuration</string>
+        <key>TargetIndices</key>
+        <array/>
+      </dict>
+
+      <key>Configuration/Project-Release.xcconfig</key>
+      <dict>
+        <key>Group</key>
+        <string>Configuration</string>
+        <key>TargetIndices</key>
+        <array/>
+      </dict>
+
+      <!-- Prefix Header -->
+      <key>common.pch</key>
+      <dict>
+        <key>TargetIndices</key>
+        <array/>
+      </dict>
+
+      <!-- Config Macros (for xcconfig files) -->
+      <key>*:configDependency</key>
+      <dict>
+        <key>End</key>
+        <string>
+</string>
+      </dict>
+
+      <key>*:configDependency:*</key>
+      <string>#include "___*___.xcconfig"</string>
+
+      <key>*:config:*</key>
+      <dict>
+        <key>Beginning</key>
+        <string>
+// ___*___</string>
+      </dict>
+
+      <key>*:config:*:*</key>
+      <string>___*___</string>
+    </dict>
+  </dict>
+</plist>

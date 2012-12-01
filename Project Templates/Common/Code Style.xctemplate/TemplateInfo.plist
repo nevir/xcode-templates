@@ -1,0 +1,462 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>Identifier</key>
+    <string>net.nevir.xcode-templates.common.code-style</string>
+    <key>Description</key>
+    <string>Common options, macros, and definitions for code styling.</string>
+    <key>Kind</key>
+    <string>Xcode.Xcode3.ProjectTemplateUnitKind</string>
+
+    <key>Options</key>
+    <array>
+
+      <dict>
+        <key>Identifier</key>
+        <string>codeStyleSeparator</string>
+        <key>Name</key>
+        <string></string>
+        <key>Description</key>
+        <string>Your new product&apos;s bundle identifier</string>
+        <key>SortOrder</key>
+        <integer>100</integer>
+        <key>Type</key>
+        <string>static</string>
+        <key>NotPersisted</key>
+        <true/>
+        <key>Default</key>
+        <string>⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯ Code Style ⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯</string>
+      </dict>
+
+      <!--
+        There doesn't seem to be a way to declare conditionals outside of these
+        options blocks, so we're stuck enumerating all the combinations if we
+        are to be thorough.
+      -->
+      <dict>
+        <key>Identifier</key>
+        <string>scopeStyle</string>
+        <key>Name</key>
+        <string>Scope Style</string>
+        <key>Description</key>
+        <string>Your indentation style combined with curly brace preference.</string>
+        <key>SortOrder</key>
+        <integer>120</integer>
+        <key>Type</key>
+        <string>popup</string>
+        <key>Default</key>
+        <string>tab, { on same line</string>
+        <!--
+          What are these strange macros, you say?
+
+          Why, they're your configuration, tainted by indentation:
+
+          I1, I2, I# - indentation 1, 2, or # levels deep
+          OB0, OB#   - opening brace for a scope block that is indented # levels
+        -->
+        <key>Units</key>
+        <dict>
+          <key>tab, { on same line</key>
+          <dict>
+            <key>Macros</key>
+            <dict>
+              <key>I1</key>
+              <string>&#9;</string>
+              <key>I2</key>
+              <string>&#9;&#9;</string>
+              <key>I3</key>
+              <string>&#9;&#9;&#9;</string>
+              <key>I4</key>
+              <string>&#9;&#9;&#9;&#9;</string>
+              <key>OB0</key>
+              <string> {</string>
+              <key>OB1</key>
+              <string> {</string>
+              <key>OB2</key>
+              <string> {</string>
+              <key>OB3</key>
+              <string> {</string>
+              <key>CB0</key>
+              <string>} </string>
+              <key>CB1</key>
+              <string>} </string>
+              <key>CB2</key>
+              <string>} </string>
+              <key>CB3</key>
+              <string>} </string>
+            </dict>
+          </dict>
+          <key>2 spaces, { on same line</key>
+          <dict>
+            <key>Macros</key>
+            <dict>
+              <key>I1</key>
+              <string>  </string>
+              <key>I2</key>
+              <string>    </string>
+              <key>I3</key>
+              <string>      </string>
+              <key>I4</key>
+              <string>        </string>
+              <key>OB0</key>
+              <string> {</string>
+              <key>OB1</key>
+              <string> {</string>
+              <key>OB2</key>
+              <string> {</string>
+              <key>OB3</key>
+              <string> {</string>
+              <key>CB0</key>
+              <string>} </string>
+              <key>CB1</key>
+              <string>} </string>
+              <key>CB2</key>
+              <string>} </string>
+              <key>CB3</key>
+              <string>} </string>
+            </dict>
+          </dict>
+          <key>3 spaces, { on same line</key>
+          <dict>
+            <key>Macros</key>
+            <dict>
+              <key>I1</key>
+              <string>   </string>
+              <key>I2</key>
+              <string>      </string>
+              <key>I3</key>
+              <string>         </string>
+              <key>I4</key>
+              <string>            </string>
+              <key>OB0</key>
+              <string> {</string>
+              <key>OB1</key>
+              <string> {</string>
+              <key>OB2</key>
+              <string> {</string>
+              <key>OB3</key>
+              <string> {</string>
+              <key>CB0</key>
+              <string>} </string>
+              <key>CB1</key>
+              <string>} </string>
+              <key>CB2</key>
+              <string>} </string>
+              <key>CB3</key>
+              <string>} </string>
+            </dict>
+          </dict>
+          <key>4 spaces, { on same line</key>
+          <dict>
+            <key>Macros</key>
+            <dict>
+              <key>I1</key>
+              <string>    </string>
+              <key>I2</key>
+              <string>        </string>
+              <key>I3</key>
+              <string>            </string>
+              <key>I4</key>
+              <string>                </string>
+              <key>OB0</key>
+              <string> {</string>
+              <key>OB1</key>
+              <string> {</string>
+              <key>OB2</key>
+              <string> {</string>
+              <key>OB3</key>
+              <string> {</string>
+              <key>CB0</key>
+              <string>} </string>
+              <key>CB1</key>
+              <string>} </string>
+              <key>CB2</key>
+              <string>} </string>
+              <key>CB3</key>
+              <string>} </string>
+            </dict>
+          </dict>
+          <key>tab, { on new line</key>
+          <dict>
+            <key>Macros</key>
+            <dict>
+              <key>I1</key>
+              <string>&#9;</string>
+              <key>I2</key>
+              <string>&#9;&#9;</string>
+              <key>I3</key>
+              <string>&#9;&#9;&#9;</string>
+              <key>I4</key>
+              <string>&#9;&#9;&#9;&#9;</string>
+              <key>OB0</key>
+              <string>
+{</string>
+              <key>OB1</key>
+              <string>
+&#9;{</string>
+              <key>OB2</key>
+              <string>
+&#9;&#9;{</string>
+              <key>OB3</key>
+              <string>
+&#9;&#9;&#9;{</string>
+              <key>CB0</key>
+              <string>}
+</string>
+              <key>CB1</key>
+              <string>}
+&#9;</string>
+              <key>CB2</key>
+              <string>}
+&#9;&#9;</string>
+              <key>CB3</key>
+              <string>}
+&#9;&#9;&#9;</string>
+            </dict>
+          </dict>
+          <key>2 spaces, { on new line</key>
+          <dict>
+            <key>Macros</key>
+            <dict>
+              <key>I1</key>
+              <string>  </string>
+              <key>I2</key>
+              <string>    </string>
+              <key>I3</key>
+              <string>      </string>
+              <key>I4</key>
+              <string>        </string>
+              <key>OB0</key>
+              <string>
+{</string>
+              <key>OB1</key>
+              <string>
+  {</string>
+              <key>OB2</key>
+              <string>
+    {</string>
+              <key>OB3</key>
+              <string>
+      {</string>
+              <key>CB0</key>
+              <string>}
+</string>
+              <key>CB1</key>
+              <string>}
+  </string>
+              <key>CB2</key>
+              <string>}
+    </string>
+              <key>CB3</key>
+              <string>}
+      </string>
+            </dict>
+          </dict>
+          <key>3 spaces, { on new line</key>
+          <dict>
+            <key>Macros</key>
+            <dict>
+              <key>I1</key>
+              <string>   </string>
+              <key>I2</key>
+              <string>      </string>
+              <key>I3</key>
+              <string>         </string>
+              <key>I4</key>
+              <string>            </string>
+              <key>OB0</key>
+              <string>
+{</string>
+              <key>OB1</key>
+              <string>
+   {</string>
+              <key>OB2</key>
+              <string>
+      {</string>
+              <key>OB3</key>
+              <string>
+         {</string>
+              <key>CB0</key>
+              <string>}
+</string>
+              <key>CB1</key>
+              <string>}
+   </string>
+              <key>CB2</key>
+              <string>}
+      </string>
+              <key>CB3</key>
+              <string>}
+         </string>
+            </dict>
+          </dict>
+          <key>4 spaces, { on new line</key>
+          <dict>
+            <key>Macros</key>
+            <dict>
+              <key>I1</key>
+              <string>    </string>
+              <key>I2</key>
+              <string>        </string>
+              <key>I3</key>
+              <string>            </string>
+              <key>I4</key>
+              <string>                </string>
+              <key>OB0</key>
+              <string>
+{</string>
+              <key>OB1</key>
+              <string>
+    {</string>
+              <key>OB2</key>
+              <string>
+        {</string>
+              <key>OB3</key>
+              <string>
+            {</string>
+              <key>CB0</key>
+              <string>}
+</string>
+              <key>CB1</key>
+              <string>}
+    </string>
+              <key>CB2</key>
+              <string>}
+        </string>
+              <key>CB3</key>
+              <string>}
+            </string>
+            </dict>
+          </dict>
+        </dict>
+      </dict>
+
+      <dict>
+        <key>Identifier</key>
+        <string>pointerStyle</string>
+        <key>Name</key>
+        <string>Pointer Style</string>
+        <key>Description</key>
+        <string>Where should the * lie?</string>
+        <key>SortOrder</key>
+        <integer>120</integer>
+        <key>Type</key>
+        <string>popup</string>
+        <key>Default</key>
+        <string>Type *variable</string>
+        <key>Units</key>
+        <dict>
+          <key>Type *variable</key>
+          <dict>
+            <key>Macros</key>
+            <dict>
+              <key>P</key>
+              <string> *</string>
+            </dict>
+          </dict>
+          <key>Type* variable</key>
+          <dict>
+            <key>Macros</key>
+            <dict>
+              <key>P</key>
+              <string>* </string>
+            </dict>
+          </dict>
+        </dict>
+      </dict>
+
+      <dict>
+        <key>Identifier</key>
+        <string>useFileHeaderComments</string>
+        <key>Name</key>
+        <string>Use file header comments</string>
+        <key>Description</key>
+        <string>Do you like to have extended info at the top of each file, or not?</string>
+        <key>SortOrder</key>
+        <integer>110</integer>
+        <key>Type</key>
+        <string>checkbox</string>
+        <key>Default</key>
+        <string>false</string>
+        <key>Units</key>
+        <dict>
+          <key>true</key>
+          <dict>
+            <key>Definitions</key>
+            <dict>
+
+              <key>*:headerCommentsSlash</key>
+              <dict>
+                <key>Beginning</key>
+                <string>//
+//  ___FILENAME___
+//  ___PACKAGENAME___
+//
+//  Created by ___FULLUSERNAME___ on ___DATE___.
+//___COPYRIGHT___
+//</string>
+                <key>End</key>
+                <string>
+</string>
+              </dict>
+              <key>*:headerCommentsSlash:*</key>
+              <string>//  ___*___</string>
+
+              <key>*:headerCommentsHash</key>
+              <dict>
+                <key>Beginning</key>
+                <string>#
+#  ___FILENAME___
+#  ___PACKAGENAME___
+#
+#  Created by ___FULLUSERNAME___ on ___DATE___.
+#___COPYRIGHT___
+#</string>
+                <key>End</key>
+                <string>
+</string>
+              </dict>
+              <key>*:headerCommentsHash:*</key>
+              <string>#  ___*___</string>
+
+            </dict>
+          </dict>
+
+          <key>false</key>
+          <dict>
+            <key>Definitions</key>
+            <dict>
+              <key>*:headerCommentsSlash:*</key>
+              <string>// ___*___
+</string>
+              <key>*:headerCommentsHash:*</key>
+              <string># ___*___
+</string>
+            </dict>
+          </dict>
+        </dict>
+      </dict>
+
+    </array>
+
+    <key>Definitions</key>
+    <dict>
+      <key>*:section:*</key>
+      <dict>
+        <key>Beginning</key>
+        <string>
+
+#pragma mark - ___*___</string>
+      </dict>
+      <key>*:*:section:*</key>
+      <dict>
+        <key>Beginning</key>
+        <string>
+
+#pragma mark - ___*___</string>
+      </dict>
+    </dict>
+
+  </dict>
+</plist>

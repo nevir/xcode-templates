@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>Identifier</key>
+    <string>net.nevir.xcode-templates.ios.common.base</string>
+    <key>Description</key>
+    <string>A foundational iOS project template that provides common options, configuration, and macros</string>
+    <key>Kind</key>
+    <string>Xcode.Xcode3.ProjectTemplateUnitKind</string>
+    <key>Platforms</key>
+    <array>
+      <string>com.apple.platform.iphoneos</string>
+    </array>
+    <key>Ancestors</key>
+    <array>
+      <string>net.nevir.xcode-templates.common.base</string>
+    </array>
+
+    <key>Project</key>
+    <dict>
+      <!-- Annoyingly, this forces the setting, overriding our xcconfigs -->
+      <key>SDK</key>
+      <string>iphoneos</string>
+    </dict>
+
+    <key>Nodes</key>
+    <array>
+      <string>Configuration/Project.xcconfig:config:Architectures:// Unfortunately, this has to be set by Xcode.  To change the value of SDKROOT,</string>
+      <string>Configuration/Project.xcconfig:config:Architectures:// head to your project's build settings panel.</string>
+      <string>Configuration/Project.xcconfig:config:Architectures:// SDKROOT = iphoneos</string>
+      <string>Configuration/Project.xcconfig:config:Deployment:IPHONEOS_DEPLOYMENT_TARGET = 6.0</string>
+
+      <string>Configuration/Project-Release.xcconfig:config:Build Options:VALIDATE_PRODUCT = YES</string>
+
+      <string>Info.plist:iOS</string>
+    </array>
+
+    <key>Definitions</key>
+    <dict>
+      <!-- Info.plist -->
+      <key>Info.plist:Icons</key>
+      <dict>
+        <key>Beginning</key>
+        <string>&lt;key&gt;CFBundleIcons&lt;/key&gt;
+&lt;dict&gt;
+  &lt;key&gt;CFBundlePrimaryIcon&lt;/key&gt;
+  &lt;dict&gt;
+    &lt;key&gt;UIPrerenderedIcon&lt;/key&gt;
+    &lt;true/&gt;
+    &lt;key&gt;CFBundleIconFiles&lt;/key&gt;
+    &lt;array&gt;</string>
+        <key>End</key>
+        <string>
+    &lt;/array&gt;
+  &lt;/dict&gt;
+&lt;/dict&gt;</string>
+      </dict>
+      <key>Info.plist:Icons:*</key>
+      <string>&lt;string&gt;___*___&lt;/string&gt;</string>
+
+    </dict>
+
+  </dict>
+</plist>

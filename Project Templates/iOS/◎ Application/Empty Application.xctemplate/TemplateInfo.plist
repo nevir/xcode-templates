@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>Identifier</key>
+    <string>net.nevir.xcode-templates.ios.application.empty-application</string>
+    <key>Description</key>
+    <string>This template provides a starting point for any application. It provides just an application delegate and a window.</string>
+    <key>Kind</key>
+    <string>Xcode.Xcode3.ProjectTemplateUnitKind</string>
+    <key>Concrete</key>
+    <true/>
+    <key>Ancestors</key>
+    <array>
+      <string>net.nevir.xcode-templates.ios.common.cocoa-application</string>
+      <string>net.nevir.xcode-templates.ios.common.core-data-application</string>
+    </array>
+
+    <key>Definitions</key>
+    <dict>
+      <key>Application/___VARIABLE_classPrefix:identifier___AppDelegate.m:implementation:section:Application Lifecycle:applicationdidFinishLaunchingWithOptions:body</key>
+      <string>___I1___self.window.backgroundColor = [UIColor whiteColor];</string>
+    </dict>
+  </dict>
+</plist>
