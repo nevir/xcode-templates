@@ -56,7 +56,7 @@
 
               <string>Managers/___VARIABLE_classPrefix:identifier___DataManager.m:headerCommentsSlash:This class is a convenient place to contain all your logic surrounding core
 // data (or other) persistence mechanisms.</string>
-              <string>Managers/___VARIABLE_classPrefix:identifier___DataManager.m:import:___VARIABLE_classPrefix:identifier___DataManager.h</string>
+              <string>Managers/___VARIABLE_classPrefix:identifier___DataManager.m:import:___VARIABLE_classPrefix:identifier___DataManager</string>
               <string>Managers/___VARIABLE_classPrefix:identifier___DataManager.m:implementation:synthesize:managedObjectContext</string>
               <string>Managers/___VARIABLE_classPrefix:identifier___DataManager.m:implementation:synthesize:managedObjectModel</string>
               <string>Managers/___VARIABLE_classPrefix:identifier___DataManager.m:implementation:synthesize:persistentStoreCoordinator</string>
@@ -64,7 +64,7 @@
               <string>Managers/___VARIABLE_classPrefix:identifier___DataManager.m:implementation:section:Core Data Stack:properties</string>
               <string>Managers/___VARIABLE_classPrefix:identifier___DataManager.m:implementation:section:Core Data Interactions:methods</string>
 
-              <string>Application/___VARIABLE_classPrefix:identifier___AppDelegate.m:import:___VARIABLE_classPrefix:identifier___DataManager.h</string>
+              <string>Application/___VARIABLE_classPrefix:identifier___AppDelegate.m:import:___VARIABLE_classPrefix:identifier___DataManager</string>
               <string>Application/___VARIABLE_classPrefix:identifier___AppDelegate.m:implementation:section:Application Lifecycle:applicationWillResignActive:dataManager</string>
             </array>
 

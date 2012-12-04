@@ -101,8 +101,8 @@
             <dict>
               <key>Nodes</key>
               <array>
-                <string>Application/___VARIABLE_classPrefix:identifier___AppDelegate.m:import:___VARIABLE_classPrefix:identifier___FirstViewController.h</string>
-                <string>Application/___VARIABLE_classPrefix:identifier___AppDelegate.m:import:___VARIABLE_classPrefix:identifier___SecondViewController.h</string>
+                <string>Application/___VARIABLE_classPrefix:identifier___AppDelegate.m:import:___VARIABLE_classPrefix:identifier___FirstViewController</string>
+                <string>Application/___VARIABLE_classPrefix:identifier___AppDelegate.m:import:___VARIABLE_classPrefix:identifier___SecondViewController</string>
                 <string>Application/___VARIABLE_classPrefix:identifier___AppDelegate.m:implementation:section:Application Lifecycle:applicationdidFinishLaunchingWithOptions:body</string>
                 <string>ViewControllers/___VARIABLE_classPrefix:identifier___FirstViewController.m:implementation:initializers:initViewController:body</string>
                 <string>ViewControllers/___VARIABLE_classPrefix:identifier___SecondViewController.m:implementation:initializers:initViewController:body</string>
@@ -283,7 +283,7 @@ ___I1___self.window.rootViewController = tabBarController;</string>
       <string>ViewControllers/___VARIABLE_classPrefix:identifier___FirstViewController.h:interface:definition:UIViewController</string>
 
       <string>ViewControllers/___VARIABLE_classPrefix:identifier___FirstViewController.m:headerCommentsSlash:View controller for the first tab of ___PROJECTNAME___</string>
-      <string>ViewControllers/___VARIABLE_classPrefix:identifier___FirstViewController.m:import:___VARIABLE_classPrefix:identifier___FirstViewController.h</string>
+      <string>ViewControllers/___VARIABLE_classPrefix:identifier___FirstViewController.m:import:___VARIABLE_classPrefix:identifier___FirstViewController</string>
       <string>ViewControllers/___VARIABLE_classPrefix:identifier___FirstViewController.m:implementation:initializers</string>
       <string>ViewControllers/___VARIABLE_classPrefix:identifier___FirstViewController.m:implementation:section:View Lifecycle:viewDidLoad</string>
       <string>ViewControllers/___VARIABLE_classPrefix:identifier___FirstViewController.m:implementation:section:View Lifecycle:didReceiveMemoryWarning</string>
@@ -292,7 +292,7 @@ ___I1___self.window.rootViewController = tabBarController;</string>
       <string>ViewControllers/___VARIABLE_classPrefix:identifier___SecondViewController.h:interface:definition:UIViewController</string>
 
       <string>ViewControllers/___VARIABLE_classPrefix:identifier___SecondViewController.m:headerCommentsSlash:View controller for the second tab of ___PROJECTNAME___</string>
-      <string>ViewControllers/___VARIABLE_classPrefix:identifier___SecondViewController.m:import:___VARIABLE_classPrefix:identifier___SecondViewController.h</string>
+      <string>ViewControllers/___VARIABLE_classPrefix:identifier___SecondViewController.m:import:___VARIABLE_classPrefix:identifier___SecondViewController</string>
       <string>ViewControllers/___VARIABLE_classPrefix:identifier___SecondViewController.m:implementation:initializers</string>
       <string>ViewControllers/___VARIABLE_classPrefix:identifier___SecondViewController.m:implementation:section:View Lifecycle:viewDidLoad</string>
       <string>ViewControllers/___VARIABLE_classPrefix:identifier___SecondViewController.m:implementation:section:View Lifecycle:didReceiveMemoryWarning</string>

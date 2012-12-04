@@ -106,7 +106,7 @@
 </string>
       </dict>
       <key>*:import:*</key>
-      <string>#import &quot;___*___&quot;</string>
+      <string>#import &quot;___*___.h&quot;</string>
 
       <!-- Class Interface Helpers -->
       <key>*:interface</key>

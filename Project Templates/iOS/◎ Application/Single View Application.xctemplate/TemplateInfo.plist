@@ -123,7 +123,7 @@
               <key>Nodes</key>
               <array>
                 <string>en.lproj/Interface/___VARIABLE_classPrefix:identifier___ViewController.xib</string>
-                <string>Application/___VARIABLE_classPrefix:identifier___AppDelegate.m:import:___VARIABLE_classPrefix:identifier___ViewController.h</string>
+                <string>Application/___VARIABLE_classPrefix:identifier___AppDelegate.m:import:___VARIABLE_classPrefix:identifier___ViewController</string>
               </array>
 
               <key>Definitions</key>
@@ -152,7 +152,7 @@
               <key>Nodes</key>
               <array>
                 <string>en.lproj/Interface/___VARIABLE_classPrefix:identifier___ViewController.xib</string>
-                <string>Application/___VARIABLE_classPrefix:identifier___AppDelegate.m:import:___VARIABLE_classPrefix:identifier___ViewController.h</string>
+                <string>Application/___VARIABLE_classPrefix:identifier___AppDelegate.m:import:___VARIABLE_classPrefix:identifier___ViewController</string>
               </array>
 
               <key>Definitions</key>
@@ -182,7 +182,7 @@
               <array>
                 <string>en.lproj/Interface/___VARIABLE_classPrefix:identifier___ViewController~iphone.xib</string>
                 <string>en.lproj/Interface/___VARIABLE_classPrefix:identifier___ViewController~ipad.xib</string>
-                <string>Application/___VARIABLE_classPrefix:identifier___AppDelegate.m:import:___VARIABLE_classPrefix:identifier___ViewController.h</string>
+                <string>Application/___VARIABLE_classPrefix:identifier___AppDelegate.m:import:___VARIABLE_classPrefix:identifier___ViewController</string>
               </array>
 
               <key>Definitions</key>
@@ -221,7 +221,7 @@ ___I1___}</string>
       <string>ViewControllers/___VARIABLE_classPrefix:identifier___ViewController.h:interface:definition:UIViewController</string>
 
       <string>ViewControllers/___VARIABLE_classPrefix:identifier___ViewController.m:headerCommentsSlash</string>
-      <string>ViewControllers/___VARIABLE_classPrefix:identifier___ViewController.m:import:___VARIABLE_classPrefix:identifier___ViewController.h</string>
+      <string>ViewControllers/___VARIABLE_classPrefix:identifier___ViewController.m:import:___VARIABLE_classPrefix:identifier___ViewController</string>
       <string>ViewControllers/___VARIABLE_classPrefix:identifier___ViewController.m:implementation:section:View Lifecycle:viewDidLoad</string>
       <string>ViewControllers/___VARIABLE_classPrefix:identifier___ViewController.m:implementation:section:View Lifecycle:didReceiveMemoryWarning</string>
     </array>

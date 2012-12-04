@@ -133,7 +133,7 @@
 
       <string>common.pch:Availability:iPhoneAvailability:6</string>
 
-      <string>Application/main.m:import:___VARIABLE_classPrefix:identifier___AppDelegate.h</string>
+      <string>Application/main.m:import:___VARIABLE_classPrefix:identifier___AppDelegate</string>
       <string>Application/main.m:main:UIApplicationMain:contents</string>
 
       <string>Application/___VARIABLE_classPrefix:identifier___AppDelegate.h:headerCommentsSlash:Application delegate for ___PACKAGENAME___</string>
@@ -142,7 +142,7 @@
 
       <string>Application/___VARIABLE_classPrefix:identifier___AppDelegate.m:headerCommentsSlash:The application delegate is where you should manage lifecycle events and
 // other global application concerns.</string>
-      <string>Application/___VARIABLE_classPrefix:identifier___AppDelegate.m:import:___VARIABLE_classPrefix:identifier___AppDelegate.h</string>
+      <string>Application/___VARIABLE_classPrefix:identifier___AppDelegate.m:import:___VARIABLE_classPrefix:identifier___AppDelegate</string>
       <string>Application/___VARIABLE_classPrefix:identifier___AppDelegate.m:implementation:section:Application Lifecycle</string>
       <string>Application/___VARIABLE_classPrefix:identifier___AppDelegate.m:implementation:section:Application Lifecycle:applicationdidFinishLaunchingWithOptions:setup</string>
       <string>Application/___VARIABLE_classPrefix:identifier___AppDelegate.m:implementation:section:Application Lifecycle:applicationdidFinishLaunchingWithOptions:comments</string>

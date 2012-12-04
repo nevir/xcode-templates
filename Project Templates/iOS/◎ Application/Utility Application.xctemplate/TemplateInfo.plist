@@ -220,7 +220,7 @@ ___I1___}
             <dict>
               <key>Nodes</key>
               <array>
-                <string>Application/___VARIABLE_classPrefix:identifier___AppDelegate.m:import:___VARIABLE_classPrefix:identifier___MainViewController.h</string>
+                <string>Application/___VARIABLE_classPrefix:identifier___AppDelegate.m:import:___VARIABLE_classPrefix:identifier___MainViewController</string>
               </array>
             </dict>
 
@@ -433,12 +433,12 @@ ___I1___}
     <key>Nodes</key>
     <array>
       <string>ViewControllers/___VARIABLE_classPrefix:identifier___MainViewController.h:headerCommentsSlash:The primary view controller for ___PROJECTNAME___</string>
-      <string>ViewControllers/___VARIABLE_classPrefix:identifier___MainViewController.h:import:___VARIABLE_classPrefix:identifier___FlipsideViewController.h</string>
+      <string>ViewControllers/___VARIABLE_classPrefix:identifier___MainViewController.h:import:___VARIABLE_classPrefix:identifier___FlipsideViewController</string>
       <string>ViewControllers/___VARIABLE_classPrefix:identifier___MainViewController.h:interface:definition</string>
       <string>ViewControllers/___VARIABLE_classPrefix:identifier___MainViewController.h:interface:properties:popoverTracking</string>
 
       <string>ViewControllers/___VARIABLE_classPrefix:identifier___MainViewController.m:headerCommentsSlash</string>
-      <string>ViewControllers/___VARIABLE_classPrefix:identifier___MainViewController.m:import:___VARIABLE_classPrefix:identifier___MainViewController.h</string>
+      <string>ViewControllers/___VARIABLE_classPrefix:identifier___MainViewController.m:import:___VARIABLE_classPrefix:identifier___MainViewController</string>
       <string>ViewControllers/___VARIABLE_classPrefix:identifier___MainViewController.m:implementation:section:View Lifecycle:viewDidLoad</string>
       <string>ViewControllers/___VARIABLE_classPrefix:identifier___MainViewController.m:implementation:section:View Lifecycle:didReceiveMemoryWarning</string>
       <string>ViewControllers/___VARIABLE_classPrefix:identifier___MainViewController.m:implementation:section:Flipside Actions:methods</string>
@@ -451,7 +451,7 @@ ___I1___}
       <string>ViewControllers/___VARIABLE_classPrefix:identifier___FlipsideViewController.h:interface:methods:done</string>
 
       <string>ViewControllers/___VARIABLE_classPrefix:identifier___FlipsideViewController.m:headerCommentsSlash:The secondary info view controller for ___PROJECTNAME___</string>
-      <string>ViewControllers/___VARIABLE_classPrefix:identifier___FlipsideViewController.m:import:___VARIABLE_classPrefix:identifier___FlipsideViewController.h</string>
+      <string>ViewControllers/___VARIABLE_classPrefix:identifier___FlipsideViewController.m:import:___VARIABLE_classPrefix:identifier___FlipsideViewController</string>
       <string>ViewControllers/___VARIABLE_classPrefix:identifier___FlipsideViewController.m:implementation:section:View Lifecycle:viewDidLoad</string>
       <string>ViewControllers/___VARIABLE_classPrefix:identifier___FlipsideViewController.m:implementation:section:View Lifecycle:didReceiveMemoryWarning</string>
       <string>ViewControllers/___VARIABLE_classPrefix:identifier___FlipsideViewController.m:implementation:section:Actions:done</string>
