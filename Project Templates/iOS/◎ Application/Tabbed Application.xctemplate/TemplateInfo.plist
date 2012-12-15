@@ -20,254 +20,60 @@
     <array>
       <dict>
         <key>Identifier</key>
-        <string>useStoryboard</string>
+        <string>universalDeviceFamily</string>
         <key>Units</key>
         <dict>
-          <!-- Storyboard-based view controllers -->
-          <key>true</key>
-          <array>
-            <!-- iPhone Specific -->
+          <!-- iPhone Specific -->
+          <key>iPhone</key>
+          <dict>
+            <key>Definitions</key>
             <dict>
-              <key>RequiredOptions</key>
+              <key>en.lproj/Interface/MainStoryboard.storyboard</key>
               <dict>
-                <key>universalDeviceFamily</key>
-                <string>iPhone</string>
-              </dict>
-
-              <key>Definitions</key>
-              <dict>
-                <key>en.lproj/Interface/MainStoryboard.storyboard</key>
-                <dict>
-                  <key>Path</key>
-                  <string>MainStoryboard~iphone.storyboard</string>
-                  <key>Group</key>
-                  <string>Interface</string>
-                </dict>
+                <key>Path</key>
+                <string>MainStoryboard~iphone.storyboard</string>
+                <key>Group</key>
+                <string>Interface</string>
               </dict>
             </dict>
+          </dict>
 
-            <!-- iPad Specific -->
+          <!-- iPad Specific -->
+          <key>iPad</key>
+          <dict>
+            <key>Definitions</key>
             <dict>
-              <key>RequiredOptions</key>
+              <key>en.lproj/Interface/MainStoryboard.storyboard</key>
               <dict>
-                <key>universalDeviceFamily</key>
-                <string>iPad</string>
-              </dict>
-
-              <key>Definitions</key>
-              <dict>
-                <key>en.lproj/Interface/MainStoryboard.storyboard</key>
-                <dict>
-                  <key>Path</key>
-                  <string>MainStoryboard~ipad.storyboard</string>
-                  <key>Group</key>
-                  <string>Interface</string>
-                </dict>
+                <key>Path</key>
+                <string>MainStoryboard~ipad.storyboard</string>
+                <key>Group</key>
+                <string>Interface</string>
               </dict>
             </dict>
+          </dict>
 
-            <!-- Universal Specific -->
+          <!-- Universal Specific -->
+          <key>Universal</key>
+          <dict>
+            <key>Definitions</key>
             <dict>
-              <key>RequiredOptions</key>
+              <key>en.lproj/Interface/MainStoryboard~iphone.storyboard</key>
               <dict>
-                <key>universalDeviceFamily</key>
-                <string>Universal</string>
+                <key>Path</key>
+                <string>MainStoryboard~iphone.storyboard</string>
+                <key>Group</key>
+                <string>Interface</string>
               </dict>
-
-              <key>Definitions</key>
+              <key>en.lproj/Interface/MainStoryboard~ipad.storyboard</key>
               <dict>
-                <key>en.lproj/Interface/MainStoryboard~iphone.storyboard</key>
-                <dict>
-                  <key>Path</key>
-                  <string>MainStoryboard~iphone.storyboard</string>
-                  <key>Group</key>
-                  <string>Interface</string>
-                </dict>
-                <key>en.lproj/Interface/MainStoryboard~ipad.storyboard</key>
-                <dict>
-                  <key>Path</key>
-                  <string>MainStoryboard~ipad.storyboard</string>
-                  <key>Group</key>
-                  <string>Interface</string>
-                </dict>
+                <key>Path</key>
+                <string>MainStoryboard~ipad.storyboard</string>
+                <key>Group</key>
+                <string>Interface</string>
               </dict>
             </dict>
-          </array>
-
-          <!-- XIB-based view controllers -->
-          <key>false</key>
-          <array>
-            <!-- Generic -->
-            <dict>
-              <key>Nodes</key>
-              <array>
-                <string>Application/___VARIABLE_classPrefix:identifier___AppDelegate.m:import:___VARIABLE_classPrefix:identifier___FirstViewController</string>
-                <string>Application/___VARIABLE_classPrefix:identifier___AppDelegate.m:import:___VARIABLE_classPrefix:identifier___SecondViewController</string>
-                <string>Application/___VARIABLE_classPrefix:identifier___AppDelegate.m:implementation:section:Application Lifecycle:applicationdidFinishLaunchingWithOptions:body</string>
-                <string>ViewControllers/___VARIABLE_classPrefix:identifier___FirstViewController.m:implementation:initializers:initViewController:body</string>
-                <string>ViewControllers/___VARIABLE_classPrefix:identifier___SecondViewController.m:implementation:initializers:initViewController:body</string>
-              </array>
-
-              <key>Definitions</key>
-              <dict>
-                <key>ViewControllers/___VARIABLE_classPrefix:identifier___FirstViewController.m:implementation:initializers:initViewController:body</key>
-                <string>___I1______I1___self.title = NSLocalizedString(@"First", @"First");
-___I1______I1___self.tabBarItem.image = [UIImage imageNamed:@"first"];</string>
-
-<key>ViewControllers/___VARIABLE_classPrefix:identifier___SecondViewController.m:implementation:initializers:initViewController:body</key>
-                <string>___I1______I1___self.title = NSLocalizedString(@"Second", @"Second");
-___I1______I1___self.tabBarItem.image = [UIImage imageNamed:@"second"];</string>
-              </dict>
-            </dict>
-
-            <!-- iPhone Specific -->
-            <dict>
-              <key>RequiredOptions</key>
-              <dict>
-                <key>universalDeviceFamily</key>
-                <string>iPhone</string>
-              </dict>
-
-              <key>Nodes</key>
-              <array>
-                <string>en.lproj/Interface/___VARIABLE_classPrefix:identifier___FirstViewController.xib</string>
-                <string>en.lproj/Interface/___VARIABLE_classPrefix:identifier___SecondViewController.xib</string>
-              </array>
-
-              <key>Definitions</key>
-              <dict>
-                <key>en.lproj/Interface/___VARIABLE_classPrefix:identifier___FirstViewController.xib</key>
-                <dict>
-                  <key>Path</key>
-                  <string>FirstViewController~iphone.xib</string>
-                  <key>Group</key>
-                  <string>Interface</string>
-                </dict>
-                <key>en.lproj/Interface/___VARIABLE_classPrefix:identifier___SecondViewController.xib</key>
-                <dict>
-                  <key>Path</key>
-                  <string>SecondViewController~iphone.xib</string>
-                  <key>Group</key>
-                  <string>Interface</string>
-                </dict>
-
-                <key>Application/___VARIABLE_classPrefix:identifier___AppDelegate.m:implementation:section:Application Lifecycle:applicationdidFinishLaunchingWithOptions:body</key>
-                <string>___I1___UIViewController___P___firstViewController = [[___VARIABLE_classPrefix:identifier___FirstViewController alloc] initWithNibName:@"___VARIABLE_classPrefix:identifier___FirstViewController" bundle:nil];
-___I1___UIViewController___P___secondViewController = [[___VARIABLE_classPrefix:identifier___SecondViewController alloc] initWithNibName:@"___VARIABLE_classPrefix:identifier___SecondViewController" bundle:nil];
-___I1___UITabBarController___P___tabBarController = [[UITabBarController alloc] init];
-___I1___tabBarController.viewControllers = @[firstViewController, secondViewController];
-
-___I1___self.window.rootViewController = tabBarController;</string>
-              </dict>
-            </dict>
-
-            <!-- iPad Specific -->
-            <dict>
-              <key>RequiredOptions</key>
-              <dict>
-                <key>universalDeviceFamily</key>
-                <string>iPad</string>
-              </dict>
-
-              <key>Nodes</key>
-              <array>
-                <string>en.lproj/Interface/___VARIABLE_classPrefix:identifier___FirstViewController.xib</string>
-                <string>en.lproj/Interface/___VARIABLE_classPrefix:identifier___SecondViewController.xib</string>
-              </array>
-
-              <key>Definitions</key>
-              <dict>
-                <key>en.lproj/Interface/___VARIABLE_classPrefix:identifier___FirstViewController.xib</key>
-                <dict>
-                  <key>Path</key>
-                  <string>FirstViewController~ipad.xib</string>
-                  <key>Group</key>
-                  <string>Interface</string>
-                </dict>
-                <key>en.lproj/Interface/___VARIABLE_classPrefix:identifier___SecondViewController.xib</key>
-                <dict>
-                  <key>Path</key>
-                  <string>SecondViewController~ipad.xib</string>
-                  <key>Group</key>
-                  <string>Interface</string>
-                </dict>
-
-                <key>Application/___VARIABLE_classPrefix:identifier___AppDelegate.m:implementation:section:Application Lifecycle:applicationdidFinishLaunchingWithOptions:body</key>
-                <string>___I1___UIViewController___P___firstViewController = [[___VARIABLE_classPrefix:identifier___FirstViewController alloc] initWithNibName:@"___VARIABLE_classPrefix:identifier___FirstViewController" bundle:nil];
-___I1___UIViewController___P___secondViewController = [[___VARIABLE_classPrefix:identifier___SecondViewController alloc] initWithNibName:@"___VARIABLE_classPrefix:identifier___SecondViewController" bundle:nil];
-___I1___UITabBarController___P___tabBarController = [[UITabBarController alloc] init];
-___I1___tabBarController.viewControllers = @[firstViewController, secondViewController];
-
-___I1___self.window.rootViewController = tabBarController;</string>
-              </dict>
-            </dict>
-
-            <!-- Universal Specific -->
-            <dict>
-              <key>RequiredOptions</key>
-              <dict>
-                <key>universalDeviceFamily</key>
-                <string>Universal</string>
-              </dict>
-
-              <key>Nodes</key>
-              <array>
-                <string>en.lproj/Interface/___VARIABLE_classPrefix:identifier___FirstViewController~iphone.xib</string>
-                <string>en.lproj/Interface/___VARIABLE_classPrefix:identifier___FirstViewController~ipad.xib</string>
-                <string>en.lproj/Interface/___VARIABLE_classPrefix:identifier___SecondViewController~iphone.xib</string>
-                <string>en.lproj/Interface/___VARIABLE_classPrefix:identifier___SecondViewController~ipad.xib</string>
-              </array>
-
-              <key>Definitions</key>
-              <dict>
-                <key>en.lproj/Interface/___VARIABLE_classPrefix:identifier___FirstViewController~iphone.xib</key>
-                <dict>
-                  <key>Path</key>
-                  <string>FirstViewController~iphone.xib</string>
-                  <key>Group</key>
-                  <string>Interface</string>
-                </dict>
-                <key>en.lproj/Interface/___VARIABLE_classPrefix:identifier___FirstViewController~ipad.xib</key>
-                <dict>
-                  <key>Path</key>
-                  <string>FirstViewController~ipad.xib</string>
-                  <key>Group</key>
-                  <string>Interface</string>
-                </dict>
-                <key>en.lproj/Interface/___VARIABLE_classPrefix:identifier___SecondViewController~iphone.xib</key>
-                <dict>
-                  <key>Path</key>
-                  <string>SecondViewController~iphone.xib</string>
-                  <key>Group</key>
-                  <string>Interface</string>
-                </dict>
-                <key>en.lproj/Interface/___VARIABLE_classPrefix:identifier___SecondViewController~ipad.xib</key>
-                <dict>
-                  <key>Path</key>
-                  <string>SecondViewController~ipad.xib</string>
-                  <key>Group</key>
-                  <string>Interface</string>
-                </dict>
-
-                <key>Application/___VARIABLE_classPrefix:identifier___AppDelegate.m:implementation:section:Application Lifecycle:applicationdidFinishLaunchingWithOptions:body</key>
-                <string>___I1___UIViewController___P___firstViewController;
-___I1___UIViewController___P___secondViewController;
-
-___I1___if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPhone)___OB1___
-___I1______I1___firstViewController = [[___VARIABLE_classPrefix:identifier___FirstViewController alloc] initWithNibName:@"___VARIABLE_classPrefix:identifier___FirstViewController~iphone" bundle:nil];
-___I1______I1___secondViewController = [[___VARIABLE_classPrefix:identifier___SecondViewController alloc] initWithNibName:@"___VARIABLE_classPrefix:identifier___SecondViewController~iphone" bundle:nil];
-___I1______CB1___else___OB1___
-___I1______I1___firstViewController = [[___VARIABLE_classPrefix:identifier___FirstViewController alloc] initWithNibName:@"___VARIABLE_classPrefix:identifier___FirstViewController~ipad" bundle:nil];
-___I1______I1___secondViewController = [[___VARIABLE_classPrefix:identifier___SecondViewController alloc] initWithNibName:@"___VARIABLE_classPrefix:identifier___SecondViewController~ipad" bundle:nil];
-___I1___}
-
-___I1___UITabBarController___P___tabBarController = [[UITabBarController alloc] init];
-___I1___tabBarController.viewControllers = @[firstViewController, secondViewController];
-
-___I1___self.window.rootViewController = tabBarController;</string>
-              </dict>
-            </dict>
-          </array>
+          </dict>
         </dict>
       </dict>
     </array>

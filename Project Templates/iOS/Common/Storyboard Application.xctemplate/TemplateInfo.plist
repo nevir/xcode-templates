@@ -17,106 +17,76 @@
     <array>
       <dict>
         <key>Identifier</key>
-        <string>useStoryboard</string>
-        <key>Name</key>
-        <string>Use Storyboards</string>
-        <key>Description</key>
-        <string>Whether the application should use Interface Builder Storyboards</string>
-        <key>SortOrder</key>
-        <integer>1</integer>
-        <key>Type</key>
-        <string>checkbox</string>
-        <key>Default</key>
-        <string>true</string>
+        <string>universalDeviceFamily</string>
         <key>Units</key>
         <dict>
-          <!-- Storyboard-based view controllers -->
-          <key>true</key>
-          <array>
-            <!-- Common definitions -->
+          <!-- iPhone Specific -->
+          <key>iPhone</key>
+          <dict>
+            <key>Nodes</key>
+            <array>
+              <string>Info.plist:UIMainStoryboardFile</string>
+              <string>en.lproj/Interface/MainStoryboard.storyboard</string>
+            </array>
+
+            <key>Definitions</key>
             <dict>
-              <key>Definitions</key>
-              <dict>
-                <key>Application/___VARIABLE_classPrefix:identifier___AppDelegate.m:implementation:section:Application Lifecycle:applicationdidFinishLaunchingWithOptions:setup</key>
-                <string/>
-                <key>Application/___VARIABLE_classPrefix:identifier___AppDelegate.m:implementation:section:Application Lifecycle:applicationdidFinishLaunchingWithOptions:return</key>
-                <string>
-___I1___return YES;</string>
-              </dict>
-            </dict>
-
-            <!-- iPhone Specific -->
-            <dict>
-              <key>RequiredOptions</key>
-              <dict>
-                <key>universalDeviceFamily</key>
-                <string>iPhone</string>
-              </dict>
-
-              <key>Nodes</key>
-              <array>
-                <string>Info.plist:UIMainStoryboardFile</string>
-                <string>en.lproj/Interface/MainStoryboard.storyboard</string>
-              </array>
-
-              <key>Definitions</key>
-              <dict>
-                <key>Info.plist:UIMainStoryboardFile</key>
-                <string>&lt;key&gt;UIMainStoryboardFile&lt;/key&gt;
+              <key>Info.plist:UIMainStoryboardFile</key>
+              <string>&lt;key&gt;UIMainStoryboardFile&lt;/key&gt;
 &lt;string&gt;MainStoryboard&lt;/string&gt;</string>
-              </dict>
             </dict>
+          </dict>
 
-            <!-- iPad Specific -->
+
+          <!-- iPad Specific -->
+          <key>iPad</key>
+          <dict>
+            <key>Nodes</key>
+            <array>
+              <string>Info.plist:UIMainStoryboardFile</string>
+              <string>en.lproj/Interface/MainStoryboard.storyboard</string>
+            </array>
+
+            <key>Definitions</key>
             <dict>
-              <key>RequiredOptions</key>
-              <dict>
-                <key>universalDeviceFamily</key>
-                <string>iPad</string>
-              </dict>
-
-              <key>Nodes</key>
-              <array>
-                <string>Info.plist:UIMainStoryboardFile</string>
-                <string>en.lproj/Interface/MainStoryboard.storyboard</string>
-              </array>
-
-              <key>Definitions</key>
-              <dict>
-                <key>Info.plist:UIMainStoryboardFile</key>
-                <string>&lt;key&gt;UIMainStoryboardFile&lt;/key&gt;
+              <key>Info.plist:UIMainStoryboardFile</key>
+              <string>&lt;key&gt;UIMainStoryboardFile&lt;/key&gt;
 &lt;string&gt;MainStoryboard&lt;/string&gt;</string>
-              </dict>
             </dict>
+          </dict>
 
-            <!-- Universal Specific -->
+          <!-- Universal Specific -->
+          <key>Universal</key>
+          <dict>
+            <key>Nodes</key>
+            <array>
+              <string>Info.plist:UIMainStoryboardFile</string>
+              <string>en.lproj/Interface/MainStoryboard~iphone.storyboard</string>
+              <string>en.lproj/Interface/MainStoryboard~ipad.storyboard</string>
+            </array>
+
+            <key>Definitions</key>
             <dict>
-              <key>RequiredOptions</key>
-              <dict>
-                <key>universalDeviceFamily</key>
-                <string>Universal</string>
-              </dict>
-
-              <key>Nodes</key>
-              <array>
-                <string>Info.plist:UIMainStoryboardFile</string>
-                <string>en.lproj/Interface/MainStoryboard~iphone.storyboard</string>
-                <string>en.lproj/Interface/MainStoryboard~ipad.storyboard</string>
-              </array>
-
-              <key>Definitions</key>
-              <dict>
-                <key>Info.plist:UIMainStoryboardFile</key>
-                <string>&lt;key&gt;UIMainStoryboardFile&lt;/key&gt;
+              <key>Info.plist:UIMainStoryboardFile</key>
+              <string>&lt;key&gt;UIMainStoryboardFile&lt;/key&gt;
 &lt;string&gt;MainStoryboard~iphone&lt;/string&gt;
 &lt;key&gt;UIMainStoryboardFile~ipad&lt;/key&gt;
 &lt;string&gt;MainStoryboard~ipad&lt;/string&gt;</string>
-              </dict>
             </dict>
-          </array>
+          </dict>
+
         </dict>
       </dict>
     </array>
+
+    <key>Definitions</key>
+    <dict>
+      <key>Application/___VARIABLE_classPrefix:identifier___AppDelegate.m:implementation:section:Application Lifecycle:applicationdidFinishLaunchingWithOptions:setup</key>
+      <string/>
+      <key>Application/___VARIABLE_classPrefix:identifier___AppDelegate.m:implementation:section:Application Lifecycle:applicationdidFinishLaunchingWithOptions:return</key>
+      <string>
+___I1___return YES;</string>
+    </dict>
 
   </dict>
 </plist>
