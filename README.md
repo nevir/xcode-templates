@@ -34,8 +34,8 @@ method signatures; maybe you don't.
 What is _wrong_ with this world?!
 
 
-Modern Code Only!
------------------
+Modern Objective-C Only!
+------------------------
 
 These templates drop compatibility for a more modern feeling:
 
@@ -53,6 +53,24 @@ Having a configuration format that is not a GUI-managed XML mess (your project
 file) can be liberating.  Don't say I didn't warn you when you're running
 through the streets with an iguana on your head proclaiming the joys of being
 able to sanely review your collaborators' cofiguration changes.
+
+
+Storyboards
+-----------
+
+Yeah, I know, change is bad.  However, storyboards also happen to be nibs/xibs,
+with _even more benefits_ and _fewer downsides_; stop resisting them!
+
+Anyway, nothing's stopping you from using nibs/xibs for one-off controllers if
+you really feel the need.
+
+
+Autoresizing
+------------
+
+Constraints are great for simple layouts, but Xcode's wonky behaviors make them
+a pain to work within in storyboards/nibs/xibs.  They'll get there one day, but
+for now, your life is probably a lot safer and saner using autoresizing masks.
 
 
 Icons & Splash Screens
