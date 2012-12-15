@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2840" systemVersion="12C60" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2840" systemVersion="12C60" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" initialViewController="2">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1926"/>
     </dependencies>
@@ -12,7 +12,8 @@
                         <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="blackOpaque" translatesAutoresizingMaskIntoConstraints="NO" id="13">
+                            <navigationBar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="blackOpaque" id="13">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
                                 <items>
                                     <navigationItem title="Title" id="14">
                                         <barButtonItem key="rightBarButtonItem" title="Info" id="15">
@@ -25,11 +26,6 @@
                             </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="13" firstAttribute="leading" secondItem="8" secondAttribute="leading" type="user" id="2QB-Bm-yyx"/>
-                            <constraint firstItem="13" firstAttribute="top" secondItem="8" secondAttribute="top" type="user" id="Ite-tp-1De"/>
-                            <constraint firstItem="13" firstAttribute="trailing" secondItem="8" secondAttribute="trailing" type="user" id="rxf-8n-QJS"/>
-                        </constraints>
                     </view>
                     <connections>
                         <segue destination="5" kind="popover" identifier="showAlternate" popoverAnchorBarButtonItem="15" id="22">
@@ -49,7 +45,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="blackOpaque" translatesAutoresizingMaskIntoConstraints="NO" id="17">
+                            <navigationBar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="blackOpaque" id="17">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                 <items>
                                     <navigationItem title="Title" id="18">
                                         <barButtonItem key="leftBarButtonItem" systemItem="done" id="19">
@@ -62,11 +59,6 @@
                             </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="17" firstAttribute="trailing" secondItem="9" secondAttribute="trailing" type="user" id="Kbj-Kz-oEh"/>
-                            <constraint firstItem="17" firstAttribute="top" secondItem="9" secondAttribute="top" type="user" id="XZN-oy-cY0"/>
-                            <constraint firstItem="17" firstAttribute="leading" secondItem="9" secondAttribute="leading" type="user" id="xMB-lo-UPo"/>
-                        </constraints>
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
